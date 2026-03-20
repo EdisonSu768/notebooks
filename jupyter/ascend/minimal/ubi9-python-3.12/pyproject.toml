@@ -1,0 +1,26 @@
+[project]
+name = "minimal-notebook-ascend"
+version = "0.1.0"
+requires-python = "==3.12.*"
+
+dependencies = [
+    # JupyterLab packages
+    "odh-jupyter-trash-cleanup",
+
+    "jupyterlab",
+    "jupyter-server",
+    "jupyter-server-proxy",
+    "jupyter-server-terminals",
+    "jupyterlab-git",
+    "nbdime",
+    "nbgitpuller",
+
+    # Base packages
+    "wheel",
+    "setuptools",
+]
+
+[tool.uv]
+environments = [
+    "sys_platform == 'linux' and implementation_name == 'cpython'",
+]

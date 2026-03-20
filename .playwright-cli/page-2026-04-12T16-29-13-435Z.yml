@@ -1,0 +1,1610 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - link "logo" [ref=e11] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e12]
+        - button "Alauda DevOps" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Alauda DevOps
+          - img [ref=e18]
+      - generic [ref=e20]:
+        - button "开发者" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]:
+            - img [ref=e25]
+            - text: 开发者
+            - img [ref=e28]
+        - generic [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - img [ref=e35]
+            - generic [ref=e37]: "项目 :"
+            - generic [ref=e38]: aml
+          - img [ref=e41]
+      - generic [ref=e43]:
+        - generic [ref=e47]:
+          - img [ref=e49]
+          - text: 维保外
+        - img [ref=e54] [cursor=pointer]
+        - img [ref=e59] [cursor=pointer]
+        - generic [ref=e63] [cursor=pointer]:
+          - img "portrait" [ref=e64]
+          - generic [ref=e65]: zgsu@alauda.io
+          - img [ref=e67]
+    - generic [ref=e71]:
+      - generic [ref=e75]:
+        - link "概览" [ref=e78] [cursor=pointer]:
+          - /url: /console-devops/workspace/aml/overview
+          - generic [ref=e79]:
+            - img [ref=e81]
+            - generic [ref=e95]: 概览
+        - link "CI 看板" [ref=e98] [cursor=pointer]:
+          - /url: /console-devops/workspace/aml/ci-dashboard
+          - generic [ref=e99]:
+            - img [ref=e101]
+            - generic [ref=e112]: CI 看板
+        - generic [ref=e114]:
+          - generic [ref=e115] [cursor=pointer]:
+            - generic [ref=e116]:
+              - img [ref=e118]
+              - generic [ref=e129]: CI/CD
+            - img [ref=e131]
+          - generic [ref=e135]:
+            - link "构建" [ref=e138] [cursor=pointer]:
+              - /url: /console-devops/workspace/aml/ci
+              - generic [ref=e140]: 构建
+            - link "发布流水线" [ref=e143] [cursor=pointer]:
+              - /url: /console-devops/workspace/aml/cd
+              - generic [ref=e145]: 发布流水线
+            - link "Jenkins" [ref=e148] [cursor=pointer]:
+              - /url: /console-devops/workspace/aml/pipelines/all
+              - generic [ref=e150]: Jenkins
+        - generic [ref=e153] [cursor=pointer]:
+          - generic [ref=e154]:
+            - img [ref=e156]
+            - generic [ref=e161]: 敏捷项目管理
+          - img [ref=e163]
+        - generic [ref=e167] [cursor=pointer]:
+          - generic [ref=e168]:
+            - img [ref=e170]
+            - generic [ref=e178]: 测试管理
+          - img [ref=e180]
+        - link "代码管理" [ref=e184] [cursor=pointer]:
+          - /url: /console-devops/workspace/aml/code-management
+          - generic [ref=e185]:
+            - img [ref=e187]
+            - generic [ref=e195]: 代码管理
+        - generic [ref=e198] [cursor=pointer]:
+          - generic [ref=e199]:
+            - img [ref=e201]
+            - generic [ref=e218]: 制品管理
+          - img [ref=e220]
+        - link "凭据" [ref=e224] [cursor=pointer]:
+          - /url: /console-devops/workspace/aml/secrets
+          - generic [ref=e225]:
+            - img [ref=e227]
+            - generic [ref=e250]: 凭据
+      - img [ref=e253] [cursor=pointer]
+    - generic [ref=e255]:
+      - generic [ref=e260]:
+        - generic [ref=e262]:
+          - generic [ref=e264]:
+            - img [ref=e266]
+            - generic [ref=e277]: CI/CD
+          - generic [ref=e278]: /
+        - generic [ref=e280]:
+          - generic [ref=e283]: 构建
+          - generic [ref=e284]: /
+        - generic [ref=e289] [cursor=pointer]:
+          - generic [ref=e290]:
+            - img [ref=e292]
+            - generic [ref=e294]: "命名空间 :"
+            - generic "aml-dev" [ref=e295]:
+              - generic [ref=e296]: aml-
+              - generic [ref=e297]: dev
+          - img [ref=e300]
+      - generic [ref=e304]:
+        - generic [ref=e306]:
+          - generic [ref=e307]:
+            - img [ref=e309]
+            - generic [ref=e311]:
+              - text: 平台工程流水线能力上线啦，平台团队定义并约束流程，业务团队低成本创建执行流水线，快速实现高效工程流水线管理！
+              - link "了解更多" [ref=e312] [cursor=pointer]:
+                - /url: /console-devops-docs/zh/devops-u-cd/overview/
+                - text: 了解更多
+                - img [ref=e314]
+          - img [ref=e317] [cursor=pointer]
+        - generic [ref=e324]:
+          - generic [ref=e327]:
+            - generic [ref=e328]:
+              - generic [ref=e329]:
+                - generic [ref=e330]: 构建流水线
+                - button [ref=e333] [cursor=pointer]:
+                  - img [ref=e336]
+              - generic [ref=e338]:
+                - generic [ref=e340]:
+                  - img [ref=e343]
+                  - textbox "按构建流水线名称搜索" [ref=e345]
+                - button [ref=e347] [cursor=pointer]:
+                  - img [ref=e350]
+            - list [ref=e353]:
+              - listitem [ref=e354]:
+                - generic [ref=e355]:
+                  - generic "feast" [ref=e356]:
+                    - img [ref=e359]
+                    - generic "feast" [ref=e362]:
+                      - generic [ref=e363]: feast
+                  - generic [ref=e364]: "-"
+                  - generic [ref=e368]: "-"
+              - listitem [ref=e369]:
+                - generic [ref=e370]:
+                  - generic "model-registry-operator" [ref=e371]:
+                    - img [ref=e374]
+                    - generic "model-registry-operator" [ref=e377]:
+                      - generic [ref=e378]: model-regis
+                      - generic [ref=e379]: try-operator
+                  - generic "model-registry-operator" [ref=e380]
+                  - generic [ref=e384]: "-"
+              - listitem [ref=e385]:
+                - generic [ref=e386]:
+                  - generic "workbench-arm-images" [ref=e387]:
+                    - img [ref=e390]
+                    - generic "workbench-arm-images" [ref=e393]:
+                      - generic [ref=e394]: workbenc
+                      - generic [ref=e395]: h-arm-images
+                  - generic [ref=e396]: "-"
+                  - generic [ref=e400]: "-"
+              - listitem [ref=e401]:
+                - generic [ref=e402]:
+                  - generic "kuberay" [ref=e403]:
+                    - img [ref=e406]
+                    - generic "kuberay" [ref=e409]:
+                      - generic [ref=e410]: ku
+                      - generic [ref=e411]: beray
+                  - generic [ref=e412]: "-"
+                  - generic [ref=e416]: "-"
+              - listitem [ref=e417]:
+                - generic [ref=e418]:
+                  - generic "trustyai-operator" [ref=e419]:
+                    - img [ref=e422]
+                    - generic "trustyai-operator" [ref=e425]:
+                      - generic [ref=e426]: trust
+                      - generic [ref=e427]: yai-operator
+                  - generic [ref=e428]: "-"
+                  - generic [ref=e432]: "-"
+              - listitem [ref=e433]:
+                - generic [ref=e434]:
+                  - generic "workspace-mindspore-base" [ref=e435]:
+                    - img [ref=e438]
+                    - generic "workspace-mindspore-base" [ref=e441]:
+                      - generic [ref=e442]: workspace-mi
+                      - generic [ref=e443]: ndspore-base
+                  - generic [ref=e444]: "-"
+                  - generic [ref=e448]: "-"
+              - listitem [ref=e449]:
+                - generic [ref=e450]:
+                  - generic "npu-operator" [ref=e451]:
+                    - img [ref=e454]
+                    - generic "npu-operator" [ref=e457]:
+                      - generic [ref=e458]: npu-operator
+                  - generic [ref=e459]: "-"
+                  - generic [ref=e463]: "-"
+              - listitem [ref=e464]:
+                - generic [ref=e465]:
+                  - generic "kubeflow-model-registry" [ref=e466]:
+                    - img [ref=e469]
+                    - generic "kubeflow-model-registry" [ref=e472]:
+                      - generic [ref=e473]: kubeflow-mo
+                      - generic [ref=e474]: del-registry
+                  - generic [ref=e475]: "-"
+                  - generic [ref=e479]: "-"
+              - listitem [ref=e480]:
+                - generic [ref=e481]:
+                  - generic "lws" [ref=e482]:
+                    - img [ref=e485]
+                    - generic "lws" [ref=e488]:
+                      - generic [ref=e489]: lws
+                  - generic [ref=e490]: "-"
+                  - generic [ref=e494]: "-"
+              - listitem [ref=e495]:
+                - generic [ref=e496]:
+                  - generic "llama-stack" [ref=e497]:
+                    - img [ref=e500]
+                    - generic "llama-stack" [ref=e503]:
+                      - generic [ref=e504]: llama-stac
+                      - generic [ref=e505]: k
+                  - generic [ref=e506]: "-"
+                  - generic [ref=e510]: "-"
+              - listitem [ref=e511]:
+                - generic [ref=e512]:
+                  - generic "oidc-proxy" [ref=e513]:
+                    - img [ref=e516]
+                    - generic "oidc-proxy" [ref=e519]:
+                      - generic [ref=e520]: oidc-pro
+                      - generic [ref=e521]: xy
+                  - generic [ref=e522]: "-"
+                  - generic [ref=e526]: "-"
+              - listitem [ref=e527]:
+                - generic [ref=e528]:
+                  - generic "k8s-dra-driver-gpu" [ref=e529]:
+                    - img [ref=e532]
+                    - generic "k8s-dra-driver-gpu" [ref=e535]:
+                      - generic [ref=e536]: k8s-dr
+                      - generic [ref=e537]: a-driver-gpu
+                  - generic [ref=e538]: "-"
+                  - generic [ref=e542]: "-"
+              - listitem [ref=e543]:
+                - generic [ref=e544]:
+                  - generic "acp-mcp-server" [ref=e545]:
+                    - img [ref=e548]
+                    - generic "acp-mcp-server" [ref=e551]:
+                      - generic [ref=e552]: ac
+                      - generic [ref=e553]: p-mcp-server
+                  - generic [ref=e554]: "-"
+                  - generic [ref=e558]: "-"
+              - listitem [ref=e559]:
+                - generic [ref=e560]:
+                  - generic "ascend-device-plugin" [ref=e561]:
+                    - img [ref=e564]
+                    - generic "ascend-device-plugin" [ref=e567]:
+                      - generic [ref=e568]: ascend-d
+                      - generic [ref=e569]: evice-plugin
+                  - generic [ref=e570]: "-"
+                  - generic [ref=e574]: "-"
+              - listitem [ref=e575]:
+                - generic [ref=e576]:
+                  - generic "chronos-server" [ref=e577]:
+                    - img [ref=e580]
+                    - generic "chronos-server" [ref=e583]:
+                      - generic [ref=e584]: ch
+                      - generic [ref=e585]: ronos-server
+                  - generic [ref=e586]: "-"
+                  - generic [ref=e590]: "-"
+              - listitem [ref=e591]:
+                - generic [ref=e592]:
+                  - generic "smart-doc-wework" [ref=e593]:
+                    - img [ref=e596]
+                    - generic "smart-doc-wework" [ref=e599]:
+                      - generic [ref=e600]: smar
+                      - generic [ref=e601]: t-doc-wework
+                  - generic [ref=e602]: "-"
+                  - generic [ref=e606]: "-"
+              - listitem [ref=e607]:
+                - generic [ref=e608]:
+                  - generic "kueue" [ref=e609]:
+                    - img [ref=e612]
+                    - generic "kueue" [ref=e615]:
+                      - generic [ref=e616]: kueue
+                  - generic [ref=e617]: "-"
+                  - generic [ref=e621]: "-"
+              - listitem [ref=e622]:
+                - generic [ref=e623]:
+                  - generic "smart-doc-base" [ref=e624]:
+                    - img [ref=e627]
+                    - generic "smart-doc-base" [ref=e630]:
+                      - generic [ref=e631]: sm
+                      - generic [ref=e632]: art-doc-base
+                  - generic [ref=e633]: "-"
+                  - generic [ref=e637]: "-"
+              - listitem [ref=e638]:
+                - generic [ref=e639]:
+                  - generic "lightspeed-byok" [ref=e640]:
+                    - img [ref=e643]
+                    - generic "lightspeed-byok" [ref=e646]:
+                      - generic [ref=e647]: lig
+                      - generic [ref=e648]: htspeed-byok
+                  - generic [ref=e649]: "-"
+                  - generic [ref=e653]: "-"
+              - listitem [ref=e654]:
+                - generic [ref=e655]:
+                  - generic "volcano-vgpu-device-plugin" [ref=e656]:
+                    - img [ref=e659]
+                    - generic "volcano-vgpu-device-plugin" [ref=e662]:
+                      - generic [ref=e663]: volcano-vgpu-d
+                      - generic [ref=e664]: evice-plugin
+                  - generic [ref=e665]: "-"
+                  - generic [ref=e669]: "-"
+              - listitem [ref=e670]:
+                - generic [ref=e671]:
+                  - generic "kubernetes-mcp-server" [ref=e672]:
+                    - img [ref=e675]
+                    - generic "kubernetes-mcp-server" [ref=e678]:
+                      - generic [ref=e679]: kubernete
+                      - generic [ref=e680]: s-mcp-server
+                  - generic [ref=e681]: "-"
+                  - generic [ref=e685]: "-"
+              - listitem [ref=e686]:
+                - generic [ref=e687]:
+                  - generic "oauth2-proxy" [ref=e688]:
+                    - img [ref=e691]
+                    - generic "oauth2-proxy" [ref=e694]:
+                      - generic [ref=e695]: oauth2-proxy
+                  - generic [ref=e696]: "-"
+                  - generic [ref=e700]: "-"
+              - listitem [ref=e701]:
+                - generic [ref=e702]:
+                  - generic "smart-doc-evaluate" [ref=e703]:
+                    - img [ref=e706]
+                    - generic "smart-doc-evaluate" [ref=e709]:
+                      - generic [ref=e710]: smart-
+                      - generic [ref=e711]: doc-evaluate
+                  - generic [ref=e712]: "-"
+                  - generic [ref=e716]: "-"
+              - listitem [ref=e717]:
+                - generic [ref=e718]:
+                  - generic "smart-doc-test" [ref=e719]:
+                    - img [ref=e722]
+                    - generic "smart-doc-test" [ref=e725]:
+                      - generic [ref=e726]: sm
+                      - generic [ref=e727]: art-doc-test
+                  - generic [ref=e728]: "-"
+                  - generic [ref=e732]: "-"
+              - listitem [ref=e733]:
+                - generic [ref=e734]:
+                  - generic "volcano-plugin-image" [ref=e735]:
+                    - img [ref=e738]
+                    - generic "volcano-plugin-image" [ref=e741]:
+                      - generic [ref=e742]: volcano-
+                      - generic [ref=e743]: plugin-image
+                  - generic [ref=e744]: "-"
+                  - generic [ref=e748]: "-"
+              - listitem [ref=e749]:
+                - generic [ref=e750]:
+                  - generic "mlflow-plugin-image" [ref=e751]:
+                    - img [ref=e754]
+                    - generic "mlflow-plugin-image" [ref=e757]:
+                      - generic [ref=e758]: mlflow-
+                      - generic [ref=e759]: plugin-image
+                  - generic [ref=e760]: "-"
+                  - generic [ref=e764]: "-"
+              - listitem [ref=e765]:
+                - generic [ref=e766]:
+                  - generic "kae-operator" [ref=e767]:
+                    - img [ref=e770]
+                    - generic "kae-operator" [ref=e773]:
+                      - generic [ref=e774]: kae-operator
+                  - generic [ref=e775]: "-"
+                  - generic [ref=e779]: "-"
+              - listitem [ref=e780]:
+                - generic [ref=e781]:
+                  - generic "langflow" [ref=e782]:
+                    - img [ref=e785]
+                    - generic "langflow" [ref=e788]:
+                      - generic [ref=e789]: lang
+                      - generic [ref=e790]: flow
+                  - generic [ref=e791]: "-"
+                  - generic [ref=e795]: "-"
+              - listitem [ref=e796]:
+                - generic [ref=e797]:
+                  - generic "nfd" [ref=e798]:
+                    - img [ref=e801]
+                    - generic "nfd" [ref=e804]:
+                      - generic [ref=e805]: nfd
+                  - generic [ref=e806]: "-"
+                  - generic [ref=e810]: "-"
+              - listitem [ref=e811]:
+                - generic [ref=e812]:
+                  - generic "sync-image" [ref=e813]:
+                    - img [ref=e816]
+                    - generic "sync-image" [ref=e819]:
+                      - generic [ref=e820]: sync-ima
+                      - generic [ref=e821]: ge
+                  - generic [ref=e822]: "-"
+                  - generic [ref=e826]: "-"
+              - listitem [ref=e827]:
+                - generic [ref=e828]:
+                  - generic "kubeflow-workspace-baseimage" [ref=e829]:
+                    - img [ref=e832]
+                    - generic "kubeflow-workspace-baseimage" [ref=e835]:
+                      - generic [ref=e836]: kubeflow-workspa
+                      - generic [ref=e837]: ce-baseimage
+                  - generic [ref=e838]: "-"
+                  - generic [ref=e842]: "-"
+              - listitem [ref=e843]:
+                - generic [ref=e844]:
+                  - generic "evidently" [ref=e845]:
+                    - img [ref=e848]
+                    - generic "evidently" [ref=e851]:
+                      - generic [ref=e852]: eviden
+                      - generic [ref=e853]: tly
+                  - generic [ref=e854]: "-"
+                  - generic [ref=e858]: "-"
+              - listitem [ref=e859]:
+                - generic [ref=e860]:
+                  - generic "workbench-ui-plugin" [ref=e861]:
+                    - img [ref=e864]
+                    - generic "workbench-ui-plugin" [ref=e867]:
+                      - generic [ref=e868]: workben
+                      - generic [ref=e869]: ch-ui-plugin
+                  - generic "notebook v2 web ui" [ref=e870]
+                  - generic [ref=e874]: "-"
+              - listitem [ref=e875]:
+                - generic [ref=e876]:
+                  - generic "featureform" [ref=e877]:
+                    - img [ref=e880]
+                    - generic "featureform" [ref=e883]:
+                      - generic [ref=e884]: featurefor
+                      - generic [ref=e885]: m
+                  - generic [ref=e886]: "-"
+                  - generic [ref=e890]: "-"
+              - listitem [ref=e891]:
+                - generic [ref=e892]:
+                  - generic "artifacts-upload-ac" [ref=e893]:
+                    - img [ref=e896]
+                    - generic "artifacts-upload-ac" [ref=e899]:
+                      - generic [ref=e900]: artifac
+                      - generic [ref=e901]: ts-upload-ac
+                  - generic [ref=e902]: "-"
+                  - generic [ref=e906]: "-"
+              - listitem [ref=e907]:
+                - generic [ref=e908]:
+                  - generic "volcano-plugin" [ref=e909]:
+                    - img [ref=e912]
+                    - generic "volcano-plugin" [ref=e915]:
+                      - generic [ref=e916]: vo
+                      - generic [ref=e917]: lcano-plugin
+                  - generic [ref=e918]: "-"
+                  - generic [ref=e922]: "-"
+              - listitem [ref=e923]:
+                - generic [ref=e924]:
+                  - generic "mlflow-plugin" [ref=e925]:
+                    - img [ref=e928]
+                    - generic "mlflow-plugin" [ref=e931]:
+                      - generic [ref=e932]: m
+                      - generic [ref=e933]: lflow-plugin
+                  - generic [ref=e934]: "-"
+                  - generic [ref=e938]: "-"
+              - listitem [ref=e939]:
+                - generic [ref=e940]:
+                  - generic "kubeflow-plugin" [ref=e941]:
+                    - img [ref=e944]
+                    - generic "kubeflow-plugin" [ref=e947]:
+                      - generic [ref=e948]: kub
+                      - generic [ref=e949]: eflow-plugin
+                  - generic "kubeflow cluster plugin to install opensource kubeflow components" [ref=e950]
+                  - generic [ref=e954]: "-"
+              - listitem [ref=e955]:
+                - generic [ref=e956]:
+                  - generic "kubeflow-workspace" [ref=e957]:
+                    - img [ref=e960]
+                    - generic "kubeflow-workspace" [ref=e963]:
+                      - generic [ref=e964]: kubefl
+                      - generic [ref=e965]: ow-workspace
+                  - generic "Workbench Plugin" [ref=e966]
+                  - generic [ref=e970]: "-"
+              - listitem [ref=e971]:
+                - generic [ref=e972]:
+                  - generic "artifacts-plugin" [ref=e973]:
+                    - img [ref=e976]
+                    - generic "artifacts-plugin" [ref=e979]:
+                      - generic [ref=e980]: arti
+                      - generic [ref=e981]: facts-plugin
+                  - generic [ref=e982]: "-"
+                  - generic [ref=e986]: "-"
+              - listitem [ref=e987]:
+                - generic [ref=e988]:
+                  - generic "artifacts-update" [ref=e989]:
+                    - img [ref=e992]
+                    - generic "artifacts-update" [ref=e995]:
+                      - generic [ref=e996]: arti
+                      - generic [ref=e997]: facts-update
+                  - generic [ref=e998]: "-"
+                  - generic [ref=e1002]: "-"
+              - listitem [ref=e1003]:
+                - generic [ref=e1004]:
+                  - generic "patpat-pack" [ref=e1005]:
+                    - img [ref=e1008]
+                    - generic "patpat-pack" [ref=e1011]:
+                      - generic [ref=e1012]: patpat-pac
+                      - generic [ref=e1013]: k
+                  - generic [ref=e1014]: "-"
+                  - generic [ref=e1018]: "-"
+              - listitem [ref=e1019]:
+                - generic [ref=e1020]:
+                  - generic "gateway-chart" [ref=e1021]:
+                    - img [ref=e1024]
+                    - generic "gateway-chart" [ref=e1027]:
+                      - generic [ref=e1028]: g
+                      - generic [ref=e1029]: ateway-chart
+                  - generic [ref=e1030]: "-"
+                  - generic [ref=e1034]: "-"
+              - listitem [ref=e1035]:
+                - generic [ref=e1036]:
+                  - generic "gateway" [ref=e1037]:
+                    - img [ref=e1040]
+                    - generic "gateway" [ref=e1043]:
+                      - generic [ref=e1044]: ga
+                      - generic [ref=e1045]: teway
+                  - generic [ref=e1046]: "-"
+                  - generic [ref=e1050]: "-"
+              - listitem [ref=e1051]:
+                - generic [ref=e1052]:
+                  - generic "pytorch" [ref=e1053]:
+                    - img [ref=e1056]
+                    - generic "pytorch" [ref=e1059]:
+                      - generic [ref=e1060]: py
+                      - generic [ref=e1061]: torch
+                  - generic [ref=e1062]: "-"
+                  - generic [ref=e1066]: "-"
+              - listitem [ref=e1067]:
+                - generic [ref=e1068]:
+                  - generic "vllm-src" [ref=e1069]:
+                    - img [ref=e1072]
+                    - generic "vllm-src" [ref=e1075]:
+                      - generic [ref=e1076]: vllm
+                      - generic [ref=e1077]: "-src"
+                  - generic [ref=e1078]: "-"
+                  - generic [ref=e1082]: "-"
+              - listitem [ref=e1083]:
+                - generic [ref=e1084]:
+                  - generic "kserve-014" [ref=e1085]:
+                    - img [ref=e1088]
+                    - generic "kserve-014" [ref=e1091]:
+                      - generic [ref=e1092]: kserve-0
+                      - generic [ref=e1093]: "14"
+                  - generic [ref=e1094]: "-"
+                  - generic [ref=e1098]: "-"
+              - listitem [ref=e1099]:
+                - generic [ref=e1100]:
+                  - generic "kn-net-istio" [ref=e1101]:
+                    - img [ref=e1104]
+                    - generic "kn-net-istio" [ref=e1107]:
+                      - generic [ref=e1108]: kn-net-istio
+                  - generic [ref=e1109]: "-"
+                  - generic [ref=e1113]: "-"
+              - listitem [ref=e1114]:
+                - generic [ref=e1115]:
+                  - generic "nvidia-device-plugin" [ref=e1116]:
+                    - img [ref=e1119]
+                    - generic "nvidia-device-plugin" [ref=e1122]:
+                      - generic [ref=e1123]: nvidia-d
+                      - generic [ref=e1124]: evice-plugin
+                  - generic [ref=e1125]: "-"
+                  - generic [ref=e1129]: "-"
+              - listitem [ref=e1130]:
+                - generic [ref=e1131]:
+                  - generic "label-studio-chart" [ref=e1132]:
+                    - img [ref=e1135]
+                    - generic "label-studio-chart" [ref=e1138]:
+                      - generic [ref=e1139]: label-
+                      - generic [ref=e1140]: studio-chart
+                  - generic [ref=e1141]: "-"
+                  - generic [ref=e1145]: "-"
+              - listitem [ref=e1146]:
+                - generic [ref=e1147]:
+                  - generic "dify-chart" [ref=e1148]:
+                    - img [ref=e1151]
+                    - generic "dify-chart" [ref=e1154]:
+                      - generic [ref=e1155]: dify-cha
+                      - generic [ref=e1156]: rt
+                  - generic [ref=e1157]: "-"
+                  - generic [ref=e1161]: "-"
+              - listitem [ref=e1162]:
+                - generic [ref=e1163]:
+                  - generic "gpu-admission" [ref=e1164]:
+                    - img [ref=e1167]
+                    - generic "gpu-admission" [ref=e1170]:
+                      - generic [ref=e1171]: g
+                      - generic [ref=e1172]: pu-admission
+                  - generic [ref=e1173]: "-"
+                  - generic [ref=e1177]: "-"
+              - listitem [ref=e1178]:
+                - generic [ref=e1179]:
+                  - generic "gpu-manager" [ref=e1180]:
+                    - img [ref=e1183]
+                    - generic "gpu-manager" [ref=e1186]:
+                      - generic [ref=e1187]: gpu-manage
+                      - generic [ref=e1188]: r
+                  - generic [ref=e1189]: "-"
+                  - generic [ref=e1193]: "-"
+              - listitem [ref=e1194]:
+                - generic [ref=e1195]:
+                  - generic "dify-plugin-daemon" [ref=e1196]:
+                    - img [ref=e1199]
+                    - generic "dify-plugin-daemon" [ref=e1202]:
+                      - generic [ref=e1203]: dify-p
+                      - generic [ref=e1204]: lugin-daemon
+                  - generic [ref=e1205]: "-"
+                  - generic [ref=e1209]: "-"
+              - listitem [ref=e1210]:
+                - generic [ref=e1211]:
+                  - generic "kserve" [ref=e1212]:
+                    - img [ref=e1215]
+                    - generic "kserve" [ref=e1218]:
+                      - generic [ref=e1219]: kserve
+                  - generic [ref=e1220]: "-"
+                  - generic [ref=e1224]: "-"
+              - listitem [ref=e1225]:
+                - generic [ref=e1226]:
+                  - generic "cuda-samples" [ref=e1227]:
+                    - img [ref=e1230]
+                    - generic "cuda-samples" [ref=e1233]:
+                      - generic [ref=e1234]: cuda-samples
+                  - generic [ref=e1235]: "-"
+                  - generic [ref=e1239]: "-"
+              - listitem [ref=e1240]:
+                - generic [ref=e1241]:
+                  - generic "hami-webui" [ref=e1242]:
+                    - img [ref=e1245]
+                    - generic "hami-webui" [ref=e1248]:
+                      - generic [ref=e1249]: hami-web
+                      - generic [ref=e1250]: ui
+                  - generic "HAMi-WebUI" [ref=e1251]
+                  - generic [ref=e1255]: "-"
+              - listitem [ref=e1256]:
+                - generic [ref=e1257]:
+                  - generic "smart-doc" [ref=e1258]:
+                    - img [ref=e1261]
+                    - generic "smart-doc" [ref=e1264]:
+                      - generic [ref=e1265]: smart-
+                      - generic [ref=e1266]: doc
+                  - generic [ref=e1267]: "-"
+                  - generic [ref=e1271]: "-"
+              - listitem [ref=e1272]:
+                - generic [ref=e1273]:
+                  - generic "dcgm-exporter" [ref=e1274]:
+                    - img [ref=e1277]
+                    - generic "dcgm-exporter" [ref=e1280]:
+                      - generic [ref=e1281]: d
+                      - generic [ref=e1282]: cgm-exporter
+                  - generic "NVIDIA dcgm-exporter" [ref=e1283]
+                  - generic [ref=e1287]: "-"
+              - listitem [ref=e1288]:
+                - generic [ref=e1289]:
+                  - generic "hami" [ref=e1290]:
+                    - img [ref=e1293]
+                    - generic "hami" [ref=e1296]:
+                      - generic [ref=e1297]: hami
+                  - generic "HAMi" [ref=e1298]
+                  - generic [ref=e1302]: "-"
+              - listitem [ref=e1303]:
+                - generic [ref=e1304]:
+                  - generic "llm-trainer" [ref=e1305]:
+                    - img [ref=e1308]
+                    - generic "llm-trainer" [ref=e1311]:
+                      - generic [ref=e1312]: llm-traine
+                      - generic [ref=e1313]: r
+                  - generic [ref=e1314]: "-"
+                  - generic [ref=e1318]: "-"
+              - listitem [ref=e1319]:
+                - generic [ref=e1320]:
+                  - generic "amlservice" [ref=e1321]:
+                    - img [ref=e1324]
+                    - generic "amlservice" [ref=e1327]:
+                      - generic [ref=e1328]: amlservi
+                      - generic [ref=e1329]: ce
+                  - generic [ref=e1330]: "-"
+                  - generic [ref=e1332]:
+                    - generic [ref=e1333]:
+                      - 'generic "gitops.app.cpaas.io/application: businessbuild-aml-build-infra" [ref=e1335]':
+                        - generic [ref=e1337]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - img [ref=e1342]
+                    - generic [ref=e1344]:
+                      - generic [ref=e1347]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - generic [ref=e1350]: "gitops.app.cpaas.io/appset: businessbuild-aml-build-infra"
+                      - generic [ref=e1353]: "project: amlservice"
+              - listitem [ref=e1354]:
+                - generic [ref=e1355]:
+                  - generic "kubeflow-1-6" [ref=e1356]:
+                    - img [ref=e1359]
+                    - generic "kubeflow-1-6" [ref=e1362]:
+                      - generic [ref=e1363]: kubeflow-1-6
+                  - generic [ref=e1364]: "-"
+                  - generic [ref=e1368]: "-"
+              - listitem [ref=e1369]:
+                - generic [ref=e1370]:
+                  - generic "storage-initializer-gitlfs" [ref=e1371]:
+                    - img [ref=e1374]
+                    - generic "storage-initializer-gitlfs" [ref=e1377]:
+                      - generic [ref=e1378]: storage-initia
+                      - generic [ref=e1379]: lizer-gitlfs
+                  - generic "kserve storage-initializer-gitlfs" [ref=e1380]
+                  - generic [ref=e1384]: "-"
+              - listitem [ref=e1385]:
+                - generic [ref=e1386]:
+                  - generic "xinference" [ref=e1387]:
+                    - img [ref=e1390]
+                    - generic "xinference" [ref=e1393]:
+                      - generic [ref=e1394]: xinferen
+                      - generic [ref=e1395]: ce
+                  - generic [ref=e1396]: "-"
+                  - generic [ref=e1400]: "-"
+              - listitem [ref=e1401]:
+                - generic [ref=e1402]:
+                  - generic "mlflow" [ref=e1403]:
+                    - img [ref=e1406]
+                    - generic "mlflow" [ref=e1409]:
+                      - generic [ref=e1410]: mlflow
+                  - generic [ref=e1411]: "-"
+                  - generic [ref=e1415]: "-"
+              - listitem [ref=e1416]:
+                - generic [ref=e1417]:
+                  - generic "monorepo-build-builtin-models" [ref=e1418]:
+                    - img [ref=e1421]
+                    - generic "monorepo-build-builtin-models" [ref=e1424]:
+                      - generic [ref=e1425]: monorepo-build-bu
+                      - generic [ref=e1426]: iltin-models
+                  - generic "构建内置模型、数据集" [ref=e1427]
+                  - generic [ref=e1429]:
+                    - generic [ref=e1430]:
+                      - 'generic "gitops.app.cpaas.io/application: businessbuild-aml-build-infra" [ref=e1432]':
+                        - generic [ref=e1434]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - img [ref=e1439]
+                    - generic [ref=e1441]:
+                      - generic [ref=e1444]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - generic [ref=e1447]: "gitops.app.cpaas.io/appset: businessbuild-aml-build-infra"
+              - listitem [ref=e1448]:
+                - generic [ref=e1449]:
+                  - generic "monorepo-package-builtin-models" [ref=e1450]:
+                    - img [ref=e1453]
+                    - generic "monorepo-package-builtin-models" [ref=e1456]:
+                      - generic [ref=e1457]: monorepo-package-bu
+                      - generic [ref=e1458]: iltin-models
+                  - generic "打包内置模型、数据集" [ref=e1459]
+                  - generic [ref=e1461]:
+                    - generic [ref=e1462]:
+                      - 'generic "gitops.app.cpaas.io/application: businessbuild-aml-build-infra" [ref=e1464]':
+                        - generic [ref=e1466]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - img [ref=e1471]
+                    - generic [ref=e1473]:
+                      - generic [ref=e1476]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - generic [ref=e1479]: "gitops.app.cpaas.io/appset: businessbuild-aml-build-infra"
+              - listitem [ref=e1480]:
+                - generic [ref=e1481]:
+                  - generic "monorepo-lint" [ref=e1482]:
+                    - img [ref=e1485]
+                    - generic "monorepo-lint" [ref=e1488]:
+                      - generic [ref=e1489]: m
+                      - generic [ref=e1490]: onorepo-lint
+                  - generic [ref=e1491]: "-"
+                  - generic [ref=e1493]:
+                    - generic [ref=e1494]:
+                      - 'generic "gitops.app.cpaas.io/application: businessbuild-aml-build-infra" [ref=e1496]':
+                        - generic [ref=e1498]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - img [ref=e1503]
+                    - generic [ref=e1505]:
+                      - generic [ref=e1508]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - generic [ref=e1511]: "gitops.app.cpaas.io/appset: businessbuild-aml-build-infra"
+                      - generic [ref=e1514]: "project: monorepo"
+              - listitem [ref=e1515]:
+                - generic [ref=e1516]:
+                  - generic "kubeflow-1-8" [ref=e1517]:
+                    - img [ref=e1520]
+                    - generic "kubeflow-1-8" [ref=e1523]:
+                      - generic [ref=e1524]: kubeflow-1-8
+                  - generic "kubeflow 1.8(centraldashboard, kfam)" [ref=e1525]
+                  - generic [ref=e1529]: "-"
+              - listitem [ref=e1530]:
+                - generic [ref=e1531]:
+                  - generic "vllm" [ref=e1532]:
+                    - img [ref=e1535]
+                    - generic "vllm" [ref=e1538]:
+                      - generic [ref=e1539]: vllm
+                  - generic [ref=e1540]: "-"
+                  - generic [ref=e1544]: "-"
+              - listitem [ref=e1545]:
+                - generic [ref=e1546]:
+                  - generic "monorepo" [ref=e1547]:
+                    - img [ref=e1550]
+                    - generic "monorepo" [ref=e1553]:
+                      - generic [ref=e1554]: mono
+                      - generic [ref=e1555]: repo
+                  - generic [ref=e1556]: "-"
+                  - generic [ref=e1558]:
+                    - generic [ref=e1559]:
+                      - 'generic "gitops.app.cpaas.io/application: businessbuild-aml-build-infra" [ref=e1561]':
+                        - generic [ref=e1563]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - img [ref=e1568]
+                    - generic [ref=e1570]:
+                      - generic [ref=e1573]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - generic [ref=e1576]: "gitops.app.cpaas.io/appset: businessbuild-aml-build-infra"
+                      - generic [ref=e1579]: "project: monorepo"
+              - listitem [ref=e1580]:
+                - generic [ref=e1581]:
+                  - generic "mlserver" [ref=e1582]:
+                    - img [ref=e1585]
+                    - generic "mlserver" [ref=e1588]:
+                      - generic [ref=e1589]: mlse
+                      - generic [ref=e1590]: rver
+                  - generic [ref=e1591]: "-"
+                  - generic [ref=e1595]: "-"
+              - listitem [ref=e1596]:
+                - generic [ref=e1597]:
+                  - generic "elyra" [ref=e1598]:
+                    - img [ref=e1601]
+                    - generic "elyra" [ref=e1604]:
+                      - generic [ref=e1605]: elyra
+                  - generic [ref=e1606]: "-"
+                  - generic [ref=e1610]: "-"
+              - listitem [ref=e1611]:
+                - generic [ref=e1612]:
+                  - generic "lich" [ref=e1613]:
+                    - img [ref=e1616]
+                    - generic "lich" [ref=e1619]:
+                      - generic [ref=e1620]: lich
+                  - generic "Alauda Machine Learning UI" [ref=e1621]
+                  - generic [ref=e1623]:
+                    - generic [ref=e1624]:
+                      - 'generic "gitops.app.cpaas.io/application: businessbuild-aml-build-infra" [ref=e1626]':
+                        - generic [ref=e1628]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - img [ref=e1633]
+                    - generic [ref=e1635]:
+                      - generic [ref=e1638]: "gitops.app.cpaas.io/application: businessbuild-aml-build-infra"
+                      - generic [ref=e1641]: "gitops.app.cpaas.io/appset: businessbuild-aml-build-infra"
+                      - generic [ref=e1644]: "project: lich"
+          - generic [ref=e1649]:
+            - generic [ref=e1650]:
+              - generic [ref=e1651]:
+                - generic [ref=e1652]:
+                  - text: workbench-arm-images
+                  - button [ref=e1653] [cursor=pointer]:
+                    - img [ref=e1656]
+                - generic [ref=e1658]:
+                  - generic [ref=e1661]:
+                    - button "未订阅" [ref=e1665] [cursor=pointer]:
+                      - generic [ref=e1666]:
+                        - img [ref=e1668]
+                        - generic [ref=e1670]: 未订阅
+                    - button [ref=e1671] [cursor=pointer]:
+                      - img [ref=e1674]
+                  - button "执行" [ref=e1678] [cursor=pointer]:
+                    - generic [ref=e1679]: 执行
+                  - button "操作" [ref=e1680] [cursor=pointer]:
+                    - generic [ref=e1681]:
+                      - text: 操作
+                      - img [ref=e1683]
+              - generic [ref=e1685]:
+                - generic [ref=e1686]:
+                  - img [ref=e1688]
+                  - text: zgsu@alauda.io
+                - generic [ref=e1690]:
+                  - img [ref=e1692]
+                  - text: 2026-03-17 15:59:25
+            - generic [ref=e1694]:
+              - generic [ref=e1695]:
+                - img "integrationClassName" [ref=e1696]
+                - generic [ref=e1697]: https://gitlab-ce.alauda.cn/aml/odh-workbench-images
+              - link [ref=e1698] [cursor=pointer]:
+                - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images
+                - img [ref=e1700]
+            - generic [ref=e1703]:
+              - tablist [ref=e1709]:
+                - generic [ref=e1710]:
+                  - tab "执行记录" [ref=e1711] [cursor=pointer]:
+                    - generic [ref=e1712]: 执行记录
+                  - tab "触发器" [ref=e1713] [cursor=pointer]:
+                    - generic [ref=e1714]: 触发器
+              - tabpanel [ref=e1716]:
+                - generic [ref=e1720]:
+                  - generic [ref=e1721]:
+                    - generic [ref=e1724]:
+                      - generic [ref=e1728]:
+                        - textbox "全部" [ref=e1729]
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                      - generic [ref=e1730]: "构建对象 :"
+                    - img [ref=e1732] [cursor=pointer]
+                  - table [ref=e1734]:
+                    - row "执行 ID 执行状态 构建对象 执行参数 执行时间/耗时" [ref=e1735]:
+                      - columnheader "执行 ID" [ref=e1736]
+                      - columnheader "执行状态" [ref=e1737]
+                      - columnheader "构建对象" [ref=e1738]
+                      - columnheader "执行参数" [ref=e1739]
+                      - columnheader "执行时间/耗时" [ref=e1740]
+                      - columnheader [ref=e1741]
+                    - 'row "workbench-arm-images-46vhv harbor zgsu@alauda.io 手动触发 执行成功 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 32 分钟前 28m 40s" [ref=e3179]':
+                      - cell "workbench-arm-images-46vhv harbor zgsu@alauda.io 手动触发" [ref=e3165]:
+                        - generic [ref=e3093]:
+                          - generic [ref=e3094]:
+                            - link "workbench-arm-images-46vhv" [ref=e3095] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-46vhv
+                            - img [ref=e3097]
+                            - img "harbor" [ref=e3166] [cursor=pointer]
+                          - generic [ref=e3103]: zgsu@alauda.io 手动触发
+                      - cell "执行成功" [ref=e3167]:
+                        - generic [ref=e3106]:
+                          - img [ref=e3109]
+                          - generic [ref=e3112]: 执行成功
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e3113]':
+                        - generic [ref=e3116]:
+                          - generic [ref=e3117]:
+                            - generic [ref=e3118]: feat/ascend
+                            - link [ref=e3119] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e3121]
+                          - generic [ref=e3123]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e3124]:
+                        - button [ref=e3126] [cursor=pointer]:
+                          - img [ref=e3129]
+                      - cell "32 分钟前 28m 40s" [ref=e3180]:
+                        - generic [ref=e3133]:
+                          - generic [ref=e3134]:
+                            - img [ref=e3136]
+                            - text: 32 分钟前
+                          - generic [ref=e3138]:
+                            - img [ref=e3140]
+                            - generic [ref=e3143]: 28m 40s
+                      - cell [ref=e3144]:
+                        - button [ref=e3147] [cursor=pointer]:
+                          - img [ref=e3150]
+                    - 'row "workbench-arm-images-rhbbr harbor zgsu@alauda.io 手动触发 执行成功 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 2 天前 3m 28s" [ref=e1742]':
+                      - cell "workbench-arm-images-rhbbr harbor zgsu@alauda.io 手动触发" [ref=e1743]:
+                        - generic [ref=e1744]:
+                          - generic [ref=e1745]:
+                            - link "workbench-arm-images-rhbbr" [ref=e1746] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-rhbbr
+                            - img "harbor" [ref=e1747] [cursor=pointer]
+                          - generic [ref=e1751]: zgsu@alauda.io 手动触发
+                      - cell "执行成功" [ref=e1752]:
+                        - generic [ref=e1754]:
+                          - img [ref=e1757]
+                          - generic [ref=e1760]: 执行成功
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e1761]':
+                        - generic [ref=e1764]:
+                          - generic [ref=e1765]:
+                            - generic [ref=e1766]: feat/ascend
+                            - link [ref=e1767] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e1769]
+                          - generic [ref=e1771]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e1772]:
+                        - button [ref=e1774] [cursor=pointer]:
+                          - img [ref=e1777]
+                      - cell "2 天前 3m 28s" [ref=e1779]:
+                        - generic [ref=e1781]:
+                          - generic [ref=e1782]:
+                            - img [ref=e1784]
+                            - text: 2 天前
+                          - generic [ref=e1786]:
+                            - img [ref=e1788]
+                            - generic [ref=e1791]: 3m 28s
+                      - cell [ref=e1792]:
+                        - button [ref=e1795] [cursor=pointer]:
+                          - img [ref=e1798]
+                    - 'row "workbench-arm-images-m9q72 harbor zgsu@alauda.io 手动触发 执行成功 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 2 天前 6m 10s" [ref=e1800]':
+                      - cell "workbench-arm-images-m9q72 harbor zgsu@alauda.io 手动触发" [ref=e1801]:
+                        - generic [ref=e1802]:
+                          - generic [ref=e1803]:
+                            - link "workbench-arm-images-m9q72" [ref=e1804] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-m9q72
+                            - img [ref=e1806]
+                            - img "harbor" [ref=e1809] [cursor=pointer]
+                          - generic [ref=e1813]: zgsu@alauda.io 手动触发
+                      - cell "执行成功" [ref=e1814]:
+                        - generic [ref=e1816]:
+                          - img [ref=e1819]
+                          - generic [ref=e1822]: 执行成功
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e1823]':
+                        - generic [ref=e1826]:
+                          - generic [ref=e1827]:
+                            - generic [ref=e1828]: feat/ascend
+                            - link [ref=e1829] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e1831]
+                          - generic [ref=e1833]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e1834]:
+                        - button [ref=e1836] [cursor=pointer]:
+                          - img [ref=e1839]
+                      - cell "2 天前 6m 10s" [ref=e1841]:
+                        - generic [ref=e1843]:
+                          - generic [ref=e1844]:
+                            - img [ref=e1846]
+                            - text: 2 天前
+                          - generic [ref=e1848]:
+                            - img [ref=e1850]
+                            - generic [ref=e1853]: 6m 10s
+                      - cell [ref=e1854]:
+                        - button [ref=e1857] [cursor=pointer]:
+                          - img [ref=e1860]
+                    - 'row "workbench-arm-images-xhf7k zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 2 天前 2m 7s" [ref=e1862]':
+                      - cell "workbench-arm-images-xhf7k zgsu@alauda.io 手动触发" [ref=e1863]:
+                        - generic [ref=e1864]:
+                          - generic [ref=e1865]:
+                            - link "workbench-arm-images-xhf7k" [ref=e1866] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-xhf7k
+                            - img [ref=e1868]
+                          - generic [ref=e1874]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e1875]:
+                        - generic [ref=e1877]:
+                          - img [ref=e1880]
+                          - generic [ref=e1883]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e1884]':
+                        - generic [ref=e1887]:
+                          - generic [ref=e1888]:
+                            - generic [ref=e1889]: feat/ascend
+                            - link [ref=e1890] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e1892]
+                          - generic [ref=e1894]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e1895]:
+                        - button [ref=e1897] [cursor=pointer]:
+                          - img [ref=e1900]
+                      - cell "2 天前 2m 7s" [ref=e1902]:
+                        - generic [ref=e1904]:
+                          - generic [ref=e1905]:
+                            - img [ref=e1907]
+                            - text: 2 天前
+                          - generic [ref=e1909]:
+                            - img [ref=e1911]
+                            - generic [ref=e1914]: 2m 7s
+                      - cell [ref=e1915]:
+                        - button [ref=e1918] [cursor=pointer]:
+                          - img [ref=e1921]
+                    - 'row "workbench-arm-images-mg676 zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 2 天前 32m 52s" [ref=e1923]':
+                      - cell "workbench-arm-images-mg676 zgsu@alauda.io 手动触发" [ref=e1924]:
+                        - generic [ref=e1925]:
+                          - generic [ref=e1926]:
+                            - link "workbench-arm-images-mg676" [ref=e1927] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-mg676
+                            - img [ref=e1929]
+                          - generic [ref=e1935]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e1936]:
+                        - generic [ref=e1938]:
+                          - img [ref=e1941]
+                          - generic [ref=e1944]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e1945]':
+                        - generic [ref=e1948]:
+                          - generic [ref=e1949]:
+                            - generic [ref=e1950]: feat/ascend
+                            - link [ref=e1951] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e1953]
+                          - generic [ref=e1955]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e1956]:
+                        - button [ref=e1958] [cursor=pointer]:
+                          - img [ref=e1961]
+                      - cell "2 天前 32m 52s" [ref=e1963]:
+                        - generic [ref=e1965]:
+                          - generic [ref=e1966]:
+                            - img [ref=e1968]
+                            - text: 2 天前
+                          - generic [ref=e1970]:
+                            - img [ref=e1972]
+                            - generic [ref=e1975]: 32m 52s
+                      - cell [ref=e1976]:
+                        - button [ref=e1979] [cursor=pointer]:
+                          - img [ref=e1982]
+                    - 'row "workbench-arm-images-4xg26 zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 2 天前 20m 20s" [ref=e1984]':
+                      - cell "workbench-arm-images-4xg26 zgsu@alauda.io 手动触发" [ref=e1985]:
+                        - generic [ref=e1986]:
+                          - generic [ref=e1987]:
+                            - link "workbench-arm-images-4xg26" [ref=e1988] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-4xg26
+                            - img [ref=e1990]
+                          - generic [ref=e1996]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e1997]:
+                        - generic [ref=e1999]:
+                          - img [ref=e2002]
+                          - generic [ref=e2005]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2006]':
+                        - generic [ref=e2009]:
+                          - generic [ref=e2010]:
+                            - generic [ref=e2011]: feat/ascend
+                            - link [ref=e2012] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2014]
+                          - generic [ref=e2016]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2017]:
+                        - button [ref=e2019] [cursor=pointer]:
+                          - img [ref=e2022]
+                      - cell "2 天前 20m 20s" [ref=e2024]:
+                        - generic [ref=e2026]:
+                          - generic [ref=e2027]:
+                            - img [ref=e2029]
+                            - text: 2 天前
+                          - generic [ref=e2031]:
+                            - img [ref=e2033]
+                            - generic [ref=e2036]: 20m 20s
+                      - cell [ref=e2037]:
+                        - button [ref=e2040] [cursor=pointer]:
+                          - img [ref=e2043]
+                    - 'row "workbench-arm-images-kbd9z harbor zgsu@alauda.io 手动触发 执行成功 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 12m 50s" [ref=e2045]':
+                      - cell "workbench-arm-images-kbd9z harbor zgsu@alauda.io 手动触发" [ref=e2046]:
+                        - generic [ref=e2047]:
+                          - generic [ref=e2048]:
+                            - link "workbench-arm-images-kbd9z" [ref=e2049] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-kbd9z
+                            - img [ref=e2051]
+                            - img "harbor" [ref=e2054] [cursor=pointer]
+                          - generic [ref=e2058]: zgsu@alauda.io 手动触发
+                      - cell "执行成功" [ref=e2059]:
+                        - generic [ref=e2061]:
+                          - img [ref=e2064]
+                          - generic [ref=e2067]: 执行成功
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2068]':
+                        - generic [ref=e2071]:
+                          - generic [ref=e2072]:
+                            - generic [ref=e2073]: feat/ascend
+                            - link [ref=e2074] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2076]
+                          - generic [ref=e2078]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2079]:
+                        - button [ref=e2081] [cursor=pointer]:
+                          - img [ref=e2084]
+                      - cell "3 天前 12m 50s" [ref=e2086]:
+                        - generic [ref=e2088]:
+                          - generic [ref=e2089]:
+                            - img [ref=e2091]
+                            - text: 3 天前
+                          - generic [ref=e2093]:
+                            - img [ref=e2095]
+                            - generic [ref=e2098]: 12m 50s
+                      - cell [ref=e2099]:
+                        - button [ref=e2102] [cursor=pointer]:
+                          - img [ref=e2105]
+                    - 'row "workbench-arm-images-2jbcr harbor zgsu@alauda.io 手动触发 执行成功 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 11m 44s" [ref=e2107]':
+                      - cell "workbench-arm-images-2jbcr harbor zgsu@alauda.io 手动触发" [ref=e2108]:
+                        - generic [ref=e2109]:
+                          - generic [ref=e2110]:
+                            - link "workbench-arm-images-2jbcr" [ref=e2111] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-2jbcr
+                            - img [ref=e2113]
+                            - img "harbor" [ref=e2116] [cursor=pointer]
+                          - generic [ref=e2120]: zgsu@alauda.io 手动触发
+                      - cell "执行成功" [ref=e2121]:
+                        - generic [ref=e2123]:
+                          - img [ref=e2126]
+                          - generic [ref=e2129]: 执行成功
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2130]':
+                        - generic [ref=e2133]:
+                          - generic [ref=e2134]:
+                            - generic [ref=e2135]: feat/ascend
+                            - link [ref=e2136] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2138]
+                          - generic [ref=e2140]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2141]:
+                        - button [ref=e2143] [cursor=pointer]:
+                          - img [ref=e2146]
+                      - cell "3 天前 11m 44s" [ref=e2148]:
+                        - generic [ref=e2150]:
+                          - generic [ref=e2151]:
+                            - img [ref=e2153]
+                            - text: 3 天前
+                          - generic [ref=e2155]:
+                            - img [ref=e2157]
+                            - generic [ref=e2160]: 11m 44s
+                      - cell [ref=e2161]:
+                        - button [ref=e2164] [cursor=pointer]:
+                          - img [ref=e2167]
+                    - 'row "workbench-arm-images-zrzx6 zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 1m 39s" [ref=e2169]':
+                      - cell "workbench-arm-images-zrzx6 zgsu@alauda.io 手动触发" [ref=e2170]:
+                        - generic [ref=e2171]:
+                          - link "workbench-arm-images-zrzx6" [ref=e2173] [cursor=pointer]:
+                            - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-zrzx6
+                          - generic [ref=e2177]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e2178]:
+                        - generic [ref=e2180]:
+                          - img [ref=e2183]
+                          - generic [ref=e2186]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2187]':
+                        - generic [ref=e2190]:
+                          - generic [ref=e2191]:
+                            - generic [ref=e2192]: feat/ascend
+                            - link [ref=e2193] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2195]
+                          - generic [ref=e2197]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2198]:
+                        - button [ref=e2200] [cursor=pointer]:
+                          - img [ref=e2203]
+                      - cell "3 天前 1m 39s" [ref=e2205]:
+                        - generic [ref=e2207]:
+                          - generic [ref=e2208]:
+                            - img [ref=e2210]
+                            - text: 3 天前
+                          - generic [ref=e2212]:
+                            - img [ref=e2214]
+                            - generic [ref=e2217]: 1m 39s
+                      - cell [ref=e2218]:
+                        - button [ref=e2221] [cursor=pointer]:
+                          - img [ref=e2224]
+                    - 'row "workbench-arm-images-m2mzp zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 4m 16s" [ref=e2226]':
+                      - cell "workbench-arm-images-m2mzp zgsu@alauda.io 手动触发" [ref=e2227]:
+                        - generic [ref=e2228]:
+                          - link "workbench-arm-images-m2mzp" [ref=e2230] [cursor=pointer]:
+                            - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-m2mzp
+                          - generic [ref=e2234]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e2235]:
+                        - generic [ref=e2237]:
+                          - img [ref=e2240]
+                          - generic [ref=e2243]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2244]':
+                        - generic [ref=e2247]:
+                          - generic [ref=e2248]:
+                            - generic [ref=e2249]: feat/ascend
+                            - link [ref=e2250] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2252]
+                          - generic [ref=e2254]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2255]:
+                        - button [ref=e2257] [cursor=pointer]:
+                          - img [ref=e2260]
+                      - cell "3 天前 4m 16s" [ref=e2262]:
+                        - generic [ref=e2264]:
+                          - generic [ref=e2265]:
+                            - img [ref=e2267]
+                            - text: 3 天前
+                          - generic [ref=e2269]:
+                            - img [ref=e2271]
+                            - generic [ref=e2274]: 4m 16s
+                      - cell [ref=e2275]:
+                        - button [ref=e2278] [cursor=pointer]:
+                          - img [ref=e2281]
+                    - 'row "workbench-arm-images-2dkgt zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 2m 31s" [ref=e2283]':
+                      - cell "workbench-arm-images-2dkgt zgsu@alauda.io 手动触发" [ref=e2284]:
+                        - generic [ref=e2285]:
+                          - generic [ref=e2286]:
+                            - link "workbench-arm-images-2dkgt" [ref=e2287] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-2dkgt
+                            - img [ref=e2289]
+                          - generic [ref=e2295]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e2296]:
+                        - generic [ref=e2298]:
+                          - img [ref=e2301]
+                          - generic [ref=e2304]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2305]':
+                        - generic [ref=e2308]:
+                          - generic [ref=e2309]:
+                            - generic [ref=e2310]: feat/ascend
+                            - link [ref=e2311] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2313]
+                          - generic [ref=e2315]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2316]:
+                        - button [ref=e2318] [cursor=pointer]:
+                          - img [ref=e2321]
+                      - cell "3 天前 2m 31s" [ref=e2323]:
+                        - generic [ref=e2325]:
+                          - generic [ref=e2326]:
+                            - img [ref=e2328]
+                            - text: 3 天前
+                          - generic [ref=e2330]:
+                            - img [ref=e2332]
+                            - generic [ref=e2335]: 2m 31s
+                      - cell [ref=e2336]:
+                        - button [ref=e2339] [cursor=pointer]:
+                          - img [ref=e2342]
+                    - 'row "workbench-arm-images-tlxg6 harbor zgsu@alauda.io 手动触发 执行成功 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 8m 55s" [ref=e2344]':
+                      - cell "workbench-arm-images-tlxg6 harbor zgsu@alauda.io 手动触发" [ref=e2345]:
+                        - generic [ref=e2346]:
+                          - generic [ref=e2347]:
+                            - link "workbench-arm-images-tlxg6" [ref=e2348] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-tlxg6
+                            - img [ref=e2350]
+                            - img "harbor" [ref=e2353] [cursor=pointer]
+                          - generic [ref=e2357]: zgsu@alauda.io 手动触发
+                      - cell "执行成功" [ref=e2358]:
+                        - generic [ref=e2360]:
+                          - img [ref=e2363]
+                          - generic [ref=e2366]: 执行成功
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2367]':
+                        - generic [ref=e2370]:
+                          - generic [ref=e2371]:
+                            - generic [ref=e2372]: feat/ascend
+                            - link [ref=e2373] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2375]
+                          - generic [ref=e2377]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2378]:
+                        - button [ref=e2380] [cursor=pointer]:
+                          - img [ref=e2383]
+                      - cell "3 天前 8m 55s" [ref=e2385]:
+                        - generic [ref=e2387]:
+                          - generic [ref=e2388]:
+                            - img [ref=e2390]
+                            - text: 3 天前
+                          - generic [ref=e2392]:
+                            - img [ref=e2394]
+                            - generic [ref=e2397]: 8m 55s
+                      - cell [ref=e2398]:
+                        - button [ref=e2401] [cursor=pointer]:
+                          - img [ref=e2404]
+                    - 'row "workbench-arm-images-72cww zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 3m 34s" [ref=e2406]':
+                      - cell "workbench-arm-images-72cww zgsu@alauda.io 手动触发" [ref=e2407]:
+                        - generic [ref=e2408]:
+                          - generic [ref=e2409]:
+                            - link "workbench-arm-images-72cww" [ref=e2410] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-72cww
+                            - img [ref=e2412]
+                          - generic [ref=e2418]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e2419]:
+                        - generic [ref=e2421]:
+                          - img [ref=e2424]
+                          - generic [ref=e2427]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2428]':
+                        - generic [ref=e2431]:
+                          - generic [ref=e2432]:
+                            - generic [ref=e2433]: feat/ascend
+                            - link [ref=e2434] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2436]
+                          - generic [ref=e2438]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2439]:
+                        - button [ref=e2441] [cursor=pointer]:
+                          - img [ref=e2444]
+                      - cell "3 天前 3m 34s" [ref=e2446]:
+                        - generic [ref=e2448]:
+                          - generic [ref=e2449]:
+                            - img [ref=e2451]
+                            - text: 3 天前
+                          - generic [ref=e2453]:
+                            - img [ref=e2455]
+                            - generic [ref=e2458]: 3m 34s
+                      - cell [ref=e2459]:
+                        - button [ref=e2462] [cursor=pointer]:
+                          - img [ref=e2465]
+                    - 'row "workbench-arm-images-vsxcf zgsu@alauda.io 手动触发 已终止 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 7m 58s" [ref=e2467]':
+                      - cell "workbench-arm-images-vsxcf zgsu@alauda.io 手动触发" [ref=e2468]:
+                        - generic [ref=e2469]:
+                          - generic [ref=e2470]:
+                            - link "workbench-arm-images-vsxcf" [ref=e2471] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-vsxcf
+                            - img [ref=e2473]
+                          - generic [ref=e2479]: zgsu@alauda.io 手动触发
+                      - cell "已终止" [ref=e2480]:
+                        - generic [ref=e2482]:
+                          - img [ref=e2485]
+                          - generic [ref=e2488]: 已终止
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2489]':
+                        - generic [ref=e2492]:
+                          - generic [ref=e2493]:
+                            - generic [ref=e2494]: feat/ascend
+                            - link [ref=e2495] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2497]
+                          - generic [ref=e2499]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2500]:
+                        - button [ref=e2502] [cursor=pointer]:
+                          - img [ref=e2505]
+                      - cell "3 天前 7m 58s" [ref=e2507]:
+                        - generic [ref=e2509]:
+                          - generic [ref=e2510]:
+                            - img [ref=e2512]
+                            - text: 3 天前
+                          - generic [ref=e2514]:
+                            - img [ref=e2516]
+                            - generic [ref=e2519]: 7m 58s
+                      - cell [ref=e2520]:
+                        - button [ref=e2523] [cursor=pointer]:
+                          - img [ref=e2526]
+                    - 'row "workbench-arm-images-xscck harbor zgsu@alauda.io 手动触发 执行成功 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 33m 17s" [ref=e2528]':
+                      - cell "workbench-arm-images-xscck harbor zgsu@alauda.io 手动触发" [ref=e2529]:
+                        - generic [ref=e2530]:
+                          - generic [ref=e2531]:
+                            - link "workbench-arm-images-xscck" [ref=e2532] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-xscck
+                            - img [ref=e2534]
+                            - img "harbor" [ref=e2537] [cursor=pointer]
+                          - generic [ref=e2541]: zgsu@alauda.io 手动触发
+                      - cell "执行成功" [ref=e2542]:
+                        - generic [ref=e2544]:
+                          - img [ref=e2547]
+                          - generic [ref=e2550]: 执行成功
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2551]':
+                        - generic [ref=e2554]:
+                          - generic [ref=e2555]:
+                            - generic [ref=e2556]: feat/ascend
+                            - link [ref=e2557] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2559]
+                          - generic [ref=e2561]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2562]:
+                        - button [ref=e2564] [cursor=pointer]:
+                          - img [ref=e2567]
+                      - cell "3 天前 33m 17s" [ref=e2569]:
+                        - generic [ref=e2571]:
+                          - generic [ref=e2572]:
+                            - img [ref=e2574]
+                            - text: 3 天前
+                          - generic [ref=e2576]:
+                            - img [ref=e2578]
+                            - generic [ref=e2581]: 33m 17s
+                      - cell [ref=e2582]:
+                        - button [ref=e2585] [cursor=pointer]:
+                          - img [ref=e2588]
+                    - 'row "workbench-arm-images-ld6v8 zgsu@alauda.io 手动触发 已终止 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 3m 55s" [ref=e2590]':
+                      - cell "workbench-arm-images-ld6v8 zgsu@alauda.io 手动触发" [ref=e2591]:
+                        - generic [ref=e2592]:
+                          - generic [ref=e2593]:
+                            - link "workbench-arm-images-ld6v8" [ref=e2594] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-ld6v8
+                            - img [ref=e2596]
+                          - generic [ref=e2602]: zgsu@alauda.io 手动触发
+                      - cell "已终止" [ref=e2603]:
+                        - generic [ref=e2605]:
+                          - img [ref=e2608]
+                          - generic [ref=e2611]: 已终止
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2612]':
+                        - generic [ref=e2615]:
+                          - generic [ref=e2616]:
+                            - generic [ref=e2617]: feat/ascend
+                            - link [ref=e2618] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2620]
+                          - generic [ref=e2622]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2623]:
+                        - button [ref=e2625] [cursor=pointer]:
+                          - img [ref=e2628]
+                      - cell "3 天前 3m 55s" [ref=e2630]:
+                        - generic [ref=e2632]:
+                          - generic [ref=e2633]:
+                            - img [ref=e2635]
+                            - text: 3 天前
+                          - generic [ref=e2637]:
+                            - img [ref=e2639]
+                            - generic [ref=e2642]: 3m 55s
+                      - cell [ref=e2643]:
+                        - button [ref=e2646] [cursor=pointer]:
+                          - img [ref=e2649]
+                    - 'row "workbench-arm-images-x25s7 zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 1m 12s" [ref=e2651]':
+                      - cell "workbench-arm-images-x25s7 zgsu@alauda.io 手动触发" [ref=e2652]:
+                        - generic [ref=e2653]:
+                          - link "workbench-arm-images-x25s7" [ref=e2655] [cursor=pointer]:
+                            - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-x25s7
+                          - generic [ref=e2659]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e2660]:
+                        - generic [ref=e2662]:
+                          - img [ref=e2665]
+                          - generic [ref=e2668]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2669]':
+                        - generic [ref=e2672]:
+                          - generic [ref=e2673]:
+                            - generic [ref=e2674]: feat/ascend
+                            - link [ref=e2675] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2677]
+                          - generic [ref=e2679]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2680]:
+                        - button [ref=e2682] [cursor=pointer]:
+                          - img [ref=e2685]
+                      - cell "3 天前 1m 12s" [ref=e2687]:
+                        - generic [ref=e2689]:
+                          - generic [ref=e2690]:
+                            - img [ref=e2692]
+                            - text: 3 天前
+                          - generic [ref=e2694]:
+                            - img [ref=e2696]
+                            - generic [ref=e2699]: 1m 12s
+                      - cell [ref=e2700]:
+                        - button [ref=e2703] [cursor=pointer]:
+                          - img [ref=e2706]
+                    - 'row "workbench-arm-images-4pv42 zgsu@alauda.io 手动触发 已终止 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 4m 39s" [ref=e2708]':
+                      - cell "workbench-arm-images-4pv42 zgsu@alauda.io 手动触发" [ref=e2709]:
+                        - generic [ref=e2710]:
+                          - generic [ref=e2711]:
+                            - link "workbench-arm-images-4pv42" [ref=e2712] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-4pv42
+                            - img [ref=e2714]
+                          - generic [ref=e2720]: zgsu@alauda.io 手动触发
+                      - cell "已终止" [ref=e2721]:
+                        - generic [ref=e2723]:
+                          - img [ref=e2726]
+                          - generic [ref=e2729]: 已终止
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2730]':
+                        - generic [ref=e2733]:
+                          - generic [ref=e2734]:
+                            - generic [ref=e2735]: feat/ascend
+                            - link [ref=e2736] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2738]
+                          - generic [ref=e2740]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2741]:
+                        - button [ref=e2743] [cursor=pointer]:
+                          - img [ref=e2746]
+                      - cell "3 天前 4m 39s" [ref=e2748]:
+                        - generic [ref=e2750]:
+                          - generic [ref=e2751]:
+                            - img [ref=e2753]
+                            - text: 3 天前
+                          - generic [ref=e2755]:
+                            - img [ref=e2757]
+                            - generic [ref=e2760]: 4m 39s
+                      - cell [ref=e2761]:
+                        - button [ref=e2764] [cursor=pointer]:
+                          - img [ref=e2767]
+                    - 'row "workbench-arm-images-9s4xq zgsu@alauda.io 手动触发 已终止 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 4m 29s" [ref=e2769]':
+                      - cell "workbench-arm-images-9s4xq zgsu@alauda.io 手动触发" [ref=e2770]:
+                        - generic [ref=e2771]:
+                          - generic [ref=e2772]:
+                            - link "workbench-arm-images-9s4xq" [ref=e2773] [cursor=pointer]:
+                              - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-9s4xq
+                            - img [ref=e2775]
+                          - generic [ref=e2781]: zgsu@alauda.io 手动触发
+                      - cell "已终止" [ref=e2782]:
+                        - generic [ref=e2784]:
+                          - img [ref=e2787]
+                          - generic [ref=e2790]: 已终止
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2791]':
+                        - generic [ref=e2794]:
+                          - generic [ref=e2795]:
+                            - generic [ref=e2796]: feat/ascend
+                            - link [ref=e2797] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2799]
+                          - generic [ref=e2801]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2802]:
+                        - button [ref=e2804] [cursor=pointer]:
+                          - img [ref=e2807]
+                      - cell "3 天前 4m 29s" [ref=e2809]:
+                        - generic [ref=e2811]:
+                          - generic [ref=e2812]:
+                            - img [ref=e2814]
+                            - text: 3 天前
+                          - generic [ref=e2816]:
+                            - img [ref=e2818]
+                            - generic [ref=e2821]: 4m 29s
+                      - cell [ref=e2822]:
+                        - button [ref=e2825] [cursor=pointer]:
+                          - img [ref=e2828]
+                    - 'row "workbench-arm-images-z5vvp zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 16m 49s" [ref=e2830]':
+                      - cell "workbench-arm-images-z5vvp zgsu@alauda.io 手动触发" [ref=e2831]:
+                        - generic [ref=e2832]:
+                          - link "workbench-arm-images-z5vvp" [ref=e2834] [cursor=pointer]:
+                            - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-z5vvp
+                          - generic [ref=e2838]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e2839]:
+                        - generic [ref=e2841]:
+                          - img [ref=e2844]
+                          - generic [ref=e2847]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2848]':
+                        - generic [ref=e2851]:
+                          - generic [ref=e2852]:
+                            - generic [ref=e2853]: feat/ascend
+                            - link [ref=e2854] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2856]
+                          - generic [ref=e2858]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2859]:
+                        - button [ref=e2861] [cursor=pointer]:
+                          - img [ref=e2864]
+                      - cell "3 天前 16m 49s" [ref=e2866]:
+                        - generic [ref=e2868]:
+                          - generic [ref=e2869]:
+                            - img [ref=e2871]
+                            - text: 3 天前
+                          - generic [ref=e2873]:
+                            - img [ref=e2875]
+                            - generic [ref=e2878]: 16m 49s
+                      - cell [ref=e2879]:
+                        - button [ref=e2882] [cursor=pointer]:
+                          - img [ref=e2885]
+                    - 'row "workbench-arm-images-bk8fz zgsu@alauda.io 手动触发 执行失败 feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> 3 天前 1m 18s" [ref=e2887]':
+                      - cell "workbench-arm-images-bk8fz zgsu@alauda.io 手动触发" [ref=e2888]:
+                        - generic [ref=e2889]:
+                          - link "workbench-arm-images-bk8fz" [ref=e2891] [cursor=pointer]:
+                            - /url: /console-devops/workspace/aml/ci/detail/workbench-arm-images?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev&buildRunName=workbench-arm-images-bk8fz
+                          - generic [ref=e2895]: zgsu@alauda.io 手动触发
+                      - cell "执行失败" [ref=e2896]:
+                        - generic [ref=e2898]:
+                          - img [ref=e2901]
+                          - generic [ref=e2904]: 执行失败
+                      - 'cell "feat/ascend chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>" [ref=e2905]':
+                        - generic [ref=e2908]:
+                          - generic [ref=e2909]:
+                            - generic [ref=e2910]: feat/ascend
+                            - link [ref=e2911] [cursor=pointer]:
+                              - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                              - img [ref=e2913]
+                          - generic [ref=e2915]: "chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+                      - cell [ref=e2916]:
+                        - button [ref=e2918] [cursor=pointer]:
+                          - img [ref=e2921]
+                      - cell "3 天前 1m 18s" [ref=e2923]:
+                        - generic [ref=e2925]:
+                          - generic [ref=e2926]:
+                            - img [ref=e2928]
+                            - text: 3 天前
+                          - generic [ref=e2930]:
+                            - img [ref=e2932]
+                            - generic [ref=e2935]: 1m 18s
+                      - cell [ref=e2936]:
+                        - button [ref=e2939] [cursor=pointer]:
+                          - img [ref=e2942]
+  - generic [ref=e3174]:
+    - text: 引用了即将废弃的 ClusterTask，请尽快将引用的官方 ClusterTask 任务更新为对应的平台任务，将引用的自定义 ClusterTask 更新为源管理中的任务，详细说明请参看帮助文档。
+    - link [ref=e3175] [cursor=pointer]:
+      - /url: /console-devops-docs/zh/devops-faq/cicd/modify_cluster_task/
+      - img [ref=e3177]

@@ -1,0 +1,275 @@
+ARG TARGETARCH
+
+#########################
+# configuration args    #
+#########################
+ARG INDEX_URL
+ARG CANN_VERSION=8.5.0
+ARG CANN_BUILD=8.5.T63
+
+######################################################
+# buildscripts (build stage only, not published)     #
+######################################################
+FROM quay.io/centos/centos:stream9 AS buildscripts
+COPY base-images/utils/aipcc.sh /mnt/aipcc.sh
+COPY base-images/utils/fix-permissions base-images/utils/rpm-file-permissions /mnt/usr/bin/
+
+######################################################
+# mongocli-builder (build stage only, not published) #
+######################################################
+FROM registry.access.redhat.com/ubi9/go-toolset:latest AS mongocli-builder
+
+ARG TARGETARCH
+ARG MONGOCLI_VERSION=2.0.4
+
+WORKDIR /tmp/
+
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+arch="${TARGETARCH:-$(uname -m)}"
+arch=$(echo "$arch" | cut -d- -f1)
+echo "Building mongocli for ${arch}"
+export HTTPS_PROXY=http://192.168.144.12:7890
+export https_proxy=http://192.168.144.12:7890
+curl -Lo mongodb-cli-mongocli-v${MONGOCLI_VERSION}.zip https://github.com/mongodb/mongodb-cli/archive/refs/tags/mongocli/v${MONGOCLI_VERSION}.zip
+unzip ./mongodb-cli-mongocli-v${MONGOCLI_VERSION}.zip
+cd ./mongodb-cli-mongocli-v${MONGOCLI_VERSION}/
+CGO_ENABLED=1 GOOS=linux GOARCH=${arch} GO111MODULE=on go build -a -tags strictfipsruntime -o /tmp/mongocli ./cmd/mongocli/
+EOF
+
+####################
+# cann-base        #
+####################
+FROM quay.io/sclorg/python-311-c9s:c9s AS cann-base
+
+ARG TARGETARCH
+ARG INDEX_URL
+ARG CANN_VERSION
+ARG CANN_BUILD
+
+ARG PYTHON_VERSION=3.11
+ENV TARGETARCH=${TARGETARCH} \
+    PYTHON=python${PYTHON_VERSION} \
+    VIRTUAL_ENV=/opt/app-root/ \
+    CNB_USER_ID=1001 \
+    CNB_GROUP_ID=0
+
+ENV MPI_HOME=/usr/lib64/openmpi \
+    PATH=${HOME}/bin:${HOME}/.local/bin:${APP_ROOT}/bin:/usr/local/sbin:/usr/local/bin:${MPI_HOME}/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+COPY --from=buildscripts /mnt/usr/bin/ /usr/bin/
+
+USER 0
+
+RUN \
+--mount=from=buildscripts,source=/mnt,target=/mnt \
+--mount=type=cache,sharing=locked,id=dnf-c9s,target=/var/cache/dnf \
+/bin/bash <<'EOF'
+set -Eeuxo pipefail
+/mnt/aipcc.sh
+fix-permissions ${APP_ROOT} -P
+EOF
+
+RUN rpm-file-permissions
+
+### BEGIN AIPCC pip and uv config files
+COPY --chmod=664 --chown=1001:0 base-images/utils/pip.conf.in /opt/app-root/pip.conf
+COPY --chmod=664 --chown=1001:0 base-images/utils/uv.toml.in /opt/app-root/uv.toml
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+if [ -z "${INDEX_URL}" ]; then
+  echo "ERROR: INDEX_URL build arg is required" >&2
+  exit 1
+fi
+sed -i "s|@INDEX_URL@|${INDEX_URL}|g" /opt/app-root/pip.conf
+sed -i "s|@INDEX_URL@|${INDEX_URL}|g" /opt/app-root/uv.toml
+EOF
+
+ENV VIRTUAL_ENV=${APP_ROOT} \
+    PIP_CONFIG_FILE=/opt/app-root/pip.conf \
+    UV_CONFIG_FILE=/opt/app-root/uv.toml \
+    PIP_NO_CACHE_DIR=off \
+    UV_NO_CACHE=true \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONIOENCODING=utf-8 \
+    LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8 \
+    VIRTUAL_ENV_DISABLE_PROMPT=1 \
+    LD_PRELOAD=/usr/lib64/libjemalloc.so.2 \
+    ASCEND_TOOLKIT_HOME=/usr/local/Ascend/cann \
+    ASCEND_OPS_HOME=/usr/local/Ascend/ops \
+    ASCEND_OPS_PATH=/usr/local/Ascend/cann \
+    ASCEND_NNAL_HOME=/usr/local/Ascend/nnal \
+    PATH=/usr/local/Ascend/cann/bin:/usr/local/Ascend/nnal/atb/bin:${PATH} \
+    LD_LIBRARY_PATH=/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/cann/aarch64-linux/devlib:/usr/local/Ascend/cann/lib64:/usr/local/Ascend/nnal/atb/lib \
+    PS1="(app-root) \w\$ "
+### END AIPCC pip and uv config files
+
+USER 0
+WORKDIR /tmp
+
+RUN --mount=type=cache,sharing=locked,id=dnf-c9s,target=/var/cache/dnf /bin/bash <<'EOF'
+set -Eeuxo pipefail
+if [ "${TARGETARCH}" != "arm64" ]; then
+  echo "CANN base image only supports TARGETARCH=arm64, got: ${TARGETARCH}" >&2
+  exit 1
+fi
+
+dnf -y upgrade --refresh --nobest --skip-broken --nodocs --noplugins \
+  --setopt=install_weak_deps=0 --setopt=keepcache=0
+dnf install -y --nodocs --setopt=install_weak_deps=0 \
+  ca-certificates diffutils findutils tar perl mesa-libGL
+dnf clean all
+rm -rf /var/cache/yum
+
+base_url="https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%20${CANN_BUILD}"
+install_one() {
+  local package_name="$1"
+  local artifact="${package_name}_${CANN_VERSION}_linux-aarch64.run"
+  wget -nv "${base_url}/${artifact}" -O "/tmp/${artifact}"
+  bash "/tmp/${artifact}" --install --quiet
+  rm -f "/tmp/${artifact}"
+}
+
+install_one "Ascend-cann-toolkit"
+
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:-}"
+export PYTHONPATH="${PYTHONPATH:-}"
+export CMAKE_PREFIX_PATH="${CMAKE_PREFIX_PATH:-}"
+source /usr/local/Ascend/cann/set_env.sh
+export LD_LIBRARY_PATH="/usr/local/Ascend/cann/aarch64-linux/devlib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+
+install_one "Ascend-cann-910b-ops"
+install_one "Ascend-cann-nnal"
+
+cat > /etc/ld.so.conf.d/ascend.conf <<'EOC'
+/usr/local/Ascend/driver/lib64/driver
+/usr/local/Ascend/driver/lib64/common
+/usr/local/Ascend/cann/lib64
+/usr/local/Ascend/nnal/atb/lib
+EOC
+ldconfig
+
+test -f /usr/local/Ascend/cann/set_env.sh
+test -f /usr/local/Ascend/nnal/atb/set_env.sh
+fix-permissions /usr/local/Ascend -P
+EOF
+
+USER 1001
+WORKDIR /opt/app-root/bin
+
+### BEGIN Install micropipenv and uv to deploy packages from requirements.txt
+RUN pip install --no-cache-dir --index-url https://pypi.tuna.tsinghua.edu.cn/simple -U "micropipenv[toml]==1.10.0" "uv==0.10.8"
+### END Install micropipenv and uv to deploy packages from requirements.txt
+
+#########################
+# cann-jupyter-minimal  #
+#########################
+FROM cann-base AS cann-jupyter-minimal
+
+ARG JUPYTER_REUSABLE_UTILS=jupyter/utils
+ARG MINIMAL_SOURCE_CODE=jupyter/ascend/minimal/ubi9-python-3.12
+
+WORKDIR /opt/app-root/bin
+
+COPY ${JUPYTER_REUSABLE_UTILS} utils/
+
+COPY ${MINIMAL_SOURCE_CODE}/start-notebook.sh ./
+
+USER 0
+
+### BEGIN Dependencies for PDF export
+RUN ./utils/install_pdf_deps.sh
+ENV PATH="/usr/local/texlive/bin/linux:/usr/local/pandoc/bin:$PATH"
+### END Dependencies for PDF export
+
+USER 1001
+
+WORKDIR /opt/app-root/src
+
+ENTRYPOINT ["start-notebook.sh"]
+
+#############################
+# cann-jupyter-datascience  #
+#############################
+FROM cann-jupyter-minimal AS cann-jupyter-datascience
+
+ARG DATASCIENCE_SOURCE_CODE=jupyter/ascend/datascience/ubi9-python-3.12
+
+WORKDIR /opt/app-root/bin
+
+USER root
+
+RUN --mount=type=cache,sharing=locked,id=dnf-c9s,target=/var/cache/dnf /bin/bash <<'EOF'
+set -Eeuxo pipefail
+dnf install -y jq unixODBC unixODBC-devel postgresql git-lfs libsndfile libxcrypt-compat
+dnf clean all
+rm -rf /var/cache/yum
+EOF
+
+COPY --from=mongocli-builder /tmp/mongocli /opt/app-root/bin/
+
+USER 1001
+
+COPY ${DATASCIENCE_SOURCE_CODE}/setup-elyra.sh ${DATASCIENCE_SOURCE_CODE}/utils ./utils/
+
+WORKDIR /opt/app-root/src
+
+###########################
+# cann-jupyter-modelslim  #
+###########################
+FROM cann-jupyter-datascience AS cann-jupyter-modelslim
+
+ARG MODELSLIM_SOURCE_CODE=jupyter/ascend/modelslim/ubi9-python-3.11
+ARG PYLOCK_FLAVOR
+
+ENV ATB_SET_ENV_ARGS=--cxx_abi=0 \
+    INSTALL_MSMODELSLIM=true \
+    MSMODELSLIM_VERSION=26.0.0a2 \
+    MSMODELSLIM_WHEEL_URL=https://gitcode.com/Ascend/msmodelslim/releases/download/tag_mindstudio_26.0.0.alpha02/msmodelslim-26.0.0a2-py3-none-any.whl \
+    MSMODELSLIM_BRACEX_VERSION=2.6 \
+    MSMODELSLIM_EASYDICT_VERSION=1.13 \
+    MSMODELSLIM_HUGGINGFACE_HUB_VERSION=1.10.2 \
+    MSMODELSLIM_MISTRAL_COMMON_VERSION=1.11.0 \
+    MSMODELSLIM_TRANSFORMERS_VERSION=5.2.0 \
+    MSMODELSLIM_TORCHVISION_VERSION=0.24.0 \
+    MSMODELSLIM_WCMATCH_VERSION=10.1
+
+LABEL name="odh-notebook-jupyter-modelslim-cann-ubi9-python-3.11" \
+    summary="Jupyter PyTorch notebook image with Ascend 910B and msModelSlim support" \
+    description="Jupyter PyTorch notebook image for ARM64 with CANN 8.5.0, PyTorch 2.9.0, torch_npu 7.3.0 and msModelSlim 26.0.0a2 on Python 3.11" \
+    authoritative-source-url="https://github.com/opendatahub-io/notebooks"
+
+WORKDIR /opt/app-root/bin
+
+COPY ${MODELSLIM_SOURCE_CODE}/uv.lock.d/pylock.${PYLOCK_FLAVOR}.toml ./pylock.toml
+COPY --chmod=0755 jupyter/ascend/install-pytorch-npu.sh ./install-pytorch-npu.sh
+
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+
+UV_NO_CACHE=true UV_LINK_MODE=copy UV_PREVIEW_FEATURES=pylock uv pip install \
+    --strict --no-deps --no-config --no-progress \
+    --require-hashes --compile-bytecode --index-strategy=unsafe-best-match \
+    --requirements=./pylock.toml
+
+./install-pytorch-npu.sh
+rm -f ./install-pytorch-npu.sh
+
+mkdir -p /opt/app-root/runtimes /opt/app-root/pipeline-runtimes
+rm -f /opt/app-root/share/jupyter/metadata/runtime-images/*.json || true
+sed -i -e "s/Python.*/$(python --version | cut -d '.' -f-2)\",/" /opt/app-root/share/jupyter/kernels/python3/kernel.json
+install -D -m 0644 /opt/app-root/bin/utils/jupyter_server_config.py /opt/app-root/etc/jupyter/jupyter_server_config.py
+jupyter labextension disable "@jupyterlab/apputils-extension:announcements"
+/opt/app-root/bin/utils/addons/apply.sh
+SITE_PACKAGES=$(python3 -c 'import site; print(site.getsitepackages()[0])')
+chmod -R g+w "${SITE_PACKAGES}"
+fix-permissions /opt/app-root -P
+# msmodelslim rejects group/other-writable package content such as config/ and lab_practice/.
+MSMODELSLIM_PACKAGE_DIR=$(python3 -c 'import importlib.util, pathlib; spec = importlib.util.find_spec("msmodelslim"); assert spec and spec.submodule_search_locations; print(pathlib.Path(next(iter(spec.submodule_search_locations))).resolve().as_posix())')
+test -d "${MSMODELSLIM_PACKAGE_DIR}"
+chmod -R go-w "${MSMODELSLIM_PACKAGE_DIR}"
+EOF
+
+WORKDIR /opt/app-root/src

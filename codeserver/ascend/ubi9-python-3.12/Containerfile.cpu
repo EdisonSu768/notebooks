@@ -1,0 +1,179 @@
+############################################################################################
+# Containerfile for codeserver/ascend/ubi9-python-3.12
+#
+# This variant keeps all build inputs under codeserver/ascend/ubi9-python-3.12
+# and is built with the repository root as the build context.
+############################################################################################
+
+#########################
+# configuration args    #
+#########################
+ARG BASE_IMAGE
+
+####################
+# codeserver       #
+####################
+FROM ${BASE_IMAGE} AS codeserver
+
+WORKDIR /opt/app-root/bin
+
+# OS packages need to be installed as root
+USER 0
+
+ARG CODESERVER_VERSION=4.106.3
+ARG PYLOCK_FLAVOR
+ARG CODESERVER_SOURCE_CODE=codeserver/ascend/ubi9-python-3.12
+
+LABEL name="odh-notebook-code-server-ascend-ubi9-python-3.12" \
+      summary="code-server image for ODH notebooks (ARM64/Ascend)" \
+      description="code-server image with Python 3.12 based on UBI9 for ODH notebooks - ARM64 architecture for Ascend NPU support" \
+      io.k8s.display-name="code-server image for ODH notebooks (Ascend)" \
+      io.k8s.description="code-server image with Python 3.12 based on UBI9 for ODH notebooks - ARM64 architecture for Ascend NPU support" \
+      authoritative-source-url="https://github.com/opendatahub-io/notebooks" \
+      io.openshift.build.commit.ref="main" \
+      io.openshift.build.source-location="https://github.com/opendatahub-io/notebooks/tree/main/codeserver/ascend/ubi9-python-3.12" \
+      io.openshift.build.image="quay.io/opendatahub/workbench-images:codeserver-ascend-ubi9-python-3.12"
+
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+dnf module reset -y nodejs || true
+dnf module enable -y nodejs:22
+PACKAGES=(
+    bind-utils
+    compat-openssl11
+    gettext
+    git-lfs
+    httpd
+    jq
+    libsndfile
+    mesa-libGL
+    nginx
+    nginx-mod-http-perl
+    nginx-mod-stream
+    nodejs
+    npm
+    nss_wrapper
+    perl
+    skopeo
+    tar
+    unzip
+)
+dnf install -y --setopt=tsflags=nodocs "${PACKAGES[@]}"
+dnf clean all
+rm -rf /var/cache/dnf
+EOF
+
+RUN pip install --no-cache-dir -U "micropipenv[toml]==1.10.0" "uv==0.10.8"
+
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+curl -fL "https://github.com/coder/code-server/releases/download/v${CODESERVER_VERSION}/code-server-${CODESERVER_VERSION}-linux-arm64.tar.gz" -o /tmp/code-server.tar.gz
+mkdir -p /usr/lib/code-server
+tar -xzf /tmp/code-server.tar.gz --strip-components=1 -C /usr/lib/code-server
+ln -sf /usr/lib/code-server/bin/code-server /usr/bin/code-server
+rm -f /tmp/code-server.tar.gz
+EOF
+
+COPY --chown=1001:0 ${CODESERVER_SOURCE_CODE}/utils utils/
+
+# Create and install the extensions at build-time in a temporary directory.
+# Later this directory will be copied to /opt/app-root/src/.local/share/code-server/extensions
+# via run-code-server.sh on startup.
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+mkdir -p /opt/app-root/extensions-temp
+code-server --install-extension /opt/app-root/bin/utils/ms-python.python-2026.0.0.vsix --extensions-dir /opt/app-root/extensions-temp
+code-server --install-extension /opt/app-root/bin/utils/ms-toolsai.jupyter-2025.9.1.vsix --extensions-dir /opt/app-root/extensions-temp
+EOF
+
+# Install NGINX to proxy code-server and pass probes check
+ENV APP_ROOT=/opt/app-root
+
+ENV NGINX_VERSION=1.24 \
+    NGINX_SHORT_VER=124 \
+    NGINX_CONF_PATH=/etc/nginx/nginx.conf \
+    NGINX_CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/nginx \
+    NGINX_LOG_PATH=/var/log/nginx
+
+ENV NGINX_CONFIGURATION_PATH=${APP_ROOT}/etc/nginx.d \
+    NGINX_DEFAULT_CONF_PATH=${APP_ROOT}/etc/nginx.default.d \
+    NGINX_APP_ROOT=${APP_ROOT} \
+    NGINX_PERL_MODULE_PATH=${APP_ROOT}/etc/perl
+
+# Configure httpd for CGI processing
+COPY --chown=1001:0 ${CODESERVER_SOURCE_CODE}/httpd/httpd.conf /etc/httpd/conf/httpd.conf
+COPY --chown=1001:0 ${CODESERVER_SOURCE_CODE}/httpd/codeserver-cgi.conf /etc/httpd/conf.d/codeserver-cgi.conf
+
+# Copy extra files to the image.
+COPY --chown=1001:0 ${CODESERVER_SOURCE_CODE}/nginx/root/ /
+
+## Configure nginx
+COPY ${CODESERVER_SOURCE_CODE}/nginx/serverconf/ /opt/app-root/etc/nginx.default.d/
+COPY ${CODESERVER_SOURCE_CODE}/nginx/httpconf/ /opt/app-root/etc/nginx.d/
+COPY ${CODESERVER_SOURCE_CODE}/nginx/api/ /opt/app-root/api/
+
+# Changing ownership and user rights to support following use-cases:
+# 1) running container on OpenShift, whose default security model
+#    is to run the container under random UID, but GID=0
+# 2) for working root-less container with UID=1001, which does not have
+#    to have GID=0
+# 3) for default use-case, that is running container directly on operating system,
+#    with default UID and GID (1001:0)
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+sed -i -f ${NGINX_APP_ROOT}/nginxconf.sed ${NGINX_CONF_PATH}
+mkdir -p ${NGINX_APP_ROOT}/etc/nginx.d/
+mkdir -p ${NGINX_APP_ROOT}/etc/nginx.default.d/
+mkdir -p ${NGINX_APP_ROOT}/api/
+mkdir -p ${NGINX_CONTAINER_SCRIPTS_PATH}/nginx-start
+mkdir -p ${NGINX_LOG_PATH}
+mkdir -p ${NGINX_PERL_MODULE_PATH}
+mkdir -p /var/log/httpd /var/run/httpd /etc/httpd/logs
+chown -R 1001:0 ${NGINX_CONF_PATH}
+chown -R 1001:0 ${NGINX_APP_ROOT}/etc
+chown -R 1001:0 ${NGINX_CONTAINER_SCRIPTS_PATH}/nginx-start
+chown -R 1001:0 /var/lib/nginx /var/log/nginx /run
+chown -R 1001:0 /var/log/httpd /var/run/httpd /etc/httpd/logs
+chmod    ug+rw  ${NGINX_CONF_PATH}
+chmod -R ug+rwX ${NGINX_APP_ROOT}/etc
+chmod -R ug+rwX ${NGINX_CONTAINER_SCRIPTS_PATH}/nginx-start
+chmod -R ug+rwX /var/lib/nginx /var/log/nginx /run
+chmod -R ug+rwX /var/log/httpd /var/run/httpd /etc/httpd/logs
+chmod +x /opt/app-root/api/kernels/access.cgi
+rpm-file-permissions
+mkdir -p /opt/app-root/src/.local/share/code-server/extensions
+mkdir -p /opt/app-root/src/.local/share/code-server/coder-logs
+mkdir -p /opt/app-root/src/.config/code-server
+chown -R 1001:0 /opt/app-root/src/.local/share/code-server
+chown -R 1001:0 /opt/app-root/extensions-temp
+chown -R 1001:0 /opt/app-root/src/.config/code-server
+EOF
+
+# Launcher
+COPY --chown=1001:0 ${CODESERVER_SOURCE_CODE}/run-code-server.sh ${CODESERVER_SOURCE_CODE}/run-nginx.sh ./
+
+ENV SHELL=/bin/bash
+ENV PYTHONPATH=/opt/app-root/lib/python3.12/site-packages
+
+COPY ${CODESERVER_SOURCE_CODE}/requirements.${PYLOCK_FLAVOR}.txt ./requirements.txt
+
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+env -u LD_PRELOAD python -m pip install \
+    --no-cache-dir --require-hashes --no-deps --compile \
+    --progress-bar off \
+    --requirement=./requirements.txt
+chown -R 1001:0 /opt/app-root
+EOF
+
+USER 1001
+
+RUN /bin/bash <<'EOF'
+set -Eeuxo pipefail
+chmod -R g+w /opt/app-root/lib/python3.12/site-packages
+fix-permissions /opt/app-root -P
+EOF
+
+WORKDIR /opt/app-root/src
+
+CMD ["/opt/app-root/bin/run-code-server.sh"]

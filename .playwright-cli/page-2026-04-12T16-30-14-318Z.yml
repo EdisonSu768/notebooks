@@ -1,0 +1,226 @@
+- generic [ref=e5]:
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - link "logo" [ref=e11] [cursor=pointer]:
+        - /url: /
+        - img "logo" [ref=e12]
+      - button "Alauda DevOps" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]: Alauda DevOps
+        - img [ref=e18]
+    - generic [ref=e20]:
+      - button "开发者" [ref=e22] [cursor=pointer]:
+        - generic [ref=e23]:
+          - img [ref=e25]
+          - text: 开发者
+          - img [ref=e28]
+      - generic [ref=e31] [cursor=pointer]:
+        - generic [ref=e32]:
+          - img [ref=e35]
+          - generic [ref=e37]: "项目 :"
+          - generic [ref=e38]: aml
+        - img [ref=e41]
+    - generic [ref=e43]:
+      - generic [ref=e47]:
+        - img [ref=e49]
+        - text: 维保外
+      - img [ref=e54] [cursor=pointer]
+      - img [ref=e59] [cursor=pointer]
+      - generic [ref=e63] [cursor=pointer]:
+        - img "portrait" [ref=e64]
+        - generic [ref=e65]: zgsu@alauda.io
+        - img [ref=e67]
+  - generic [ref=e71]:
+    - generic [ref=e75]:
+      - link "概览" [ref=e78] [cursor=pointer]:
+        - /url: /console-devops/workspace/aml/overview
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - generic [ref=e95]: 概览
+      - link "CI 看板" [ref=e98] [cursor=pointer]:
+        - /url: /console-devops/workspace/aml/ci-dashboard
+        - generic [ref=e99]:
+          - img [ref=e101]
+          - generic [ref=e112]: CI 看板
+      - generic [ref=e114]:
+        - generic [ref=e115] [cursor=pointer]:
+          - generic [ref=e116]:
+            - img [ref=e118]
+            - generic [ref=e129]: CI/CD
+          - img [ref=e131]
+        - generic [ref=e135]:
+          - link "构建" [ref=e138] [cursor=pointer]:
+            - /url: /console-devops/workspace/aml/ci
+            - generic [ref=e140]: 构建
+          - link "发布流水线" [ref=e143] [cursor=pointer]:
+            - /url: /console-devops/workspace/aml/cd
+            - generic [ref=e145]: 发布流水线
+          - link "Jenkins" [ref=e148] [cursor=pointer]:
+            - /url: /console-devops/workspace/aml/pipelines/all
+            - generic [ref=e150]: Jenkins
+      - generic [ref=e153] [cursor=pointer]:
+        - generic [ref=e154]:
+          - img [ref=e156]
+          - generic [ref=e161]: 敏捷项目管理
+        - img [ref=e163]
+      - generic [ref=e167] [cursor=pointer]:
+        - generic [ref=e168]:
+          - img [ref=e170]
+          - generic [ref=e178]: 测试管理
+        - img [ref=e180]
+      - link "代码管理" [ref=e184] [cursor=pointer]:
+        - /url: /console-devops/workspace/aml/code-management
+        - generic [ref=e185]:
+          - img [ref=e187]
+          - generic [ref=e195]: 代码管理
+      - generic [ref=e198] [cursor=pointer]:
+        - generic [ref=e199]:
+          - img [ref=e201]
+          - generic [ref=e218]: 制品管理
+        - img [ref=e220]
+      - link "凭据" [ref=e224] [cursor=pointer]:
+        - /url: /console-devops/workspace/aml/secrets
+        - generic [ref=e225]:
+          - img [ref=e227]
+          - generic [ref=e250]: 凭据
+    - img [ref=e253] [cursor=pointer]
+  - generic [ref=e255]:
+    - generic [ref=e260]:
+      - generic [ref=e262]:
+        - generic [ref=e264]:
+          - img [ref=e266]
+          - generic [ref=e277]: CI/CD
+        - generic [ref=e278]: /
+      - generic [ref=e280]:
+        - link "构建" [ref=e3189] [cursor=pointer]:
+          - /url: /console-devops/workspace/aml/ci
+          - generic [ref=e3190]: 构建
+        - generic [ref=e284]: /
+      - generic [ref=e3192]:
+        - link "workbench-arm-images" [ref=e3194] [cursor=pointer]:
+          - /url: /console-devops/workspace/aml/ci?buildName=workbench-arm-images&cluster=business-build&namespace=aml-dev
+        - generic [ref=e3195]: /
+      - button "workbench-arm-images-46vhv" [ref=e3201] [cursor=pointer]:
+        - generic [ref=e3202]:
+          - generic [ref=e3203]: workbench-arm-images-46vhv
+          - img [ref=e3205]
+    - generic [ref=e3213]:
+      - generic [ref=e3215]:
+        - generic [ref=e3217] [cursor=pointer]:
+          - generic [ref=e3218]:
+            - img [ref=e3221]
+            - generic [ref=e3224]: workbench-arm-images-46vhv
+          - button [ref=e3226]:
+            - img [ref=e3229]
+        - generic [ref=e3231]:
+          - generic [ref=e3232]: 日志信息
+          - generic [ref=e3235]:
+            - generic [ref=e3236]:
+              - generic [ref=e3238]:
+                - generic [ref=e3239]:
+                  - img [ref=e3243]
+                  - generic "git-clone" [ref=e3246]: git-clone (1次)
+                - generic [ref=e3248]: 28s
+                - button [ref=e3249] [cursor=pointer]:
+                  - img [ref=e3252]
+              - generic [ref=e3256]:
+                - generic [ref=e3257]:
+                  - img [ref=e3261]
+                  - generic "clone" [ref=e3264]
+                - generic [ref=e3266]: 6s
+            - generic [ref=e3270]:
+              - img [ref=e3274]
+              - generic "build-base-image" [ref=e3277]
+            - generic [ref=e3281]:
+              - img [ref=e3285]
+              - generic "build-ascend-minimal-cpu" [ref=e3288]
+            - generic [ref=e3292]:
+              - img [ref=e3296]
+              - generic "build-ascend-minimal-cann" [ref=e3299]
+            - generic [ref=e3303]:
+              - img [ref=e3307]
+              - generic "build-ascend-datascience" [ref=e3310]
+            - generic [ref=e3314]:
+              - img [ref=e3318]
+              - generic "build-ascend-codeserver-datascience" [ref=e3321]
+            - generic [ref=e3325]:
+              - img [ref=e3329]
+              - generic "build-ascend-pytorch-cann" [ref=e3332]
+            - generic [ref=e3333]:
+              - generic [ref=e3335]:
+                - generic [ref=e3336]:
+                  - img [ref=e3340]
+                  - generic "build-ascend-mindspore-cann" [ref=e3343]: build-ascend-mindspore-cann (1次)
+                - generic [ref=e3345]: 28m 7s
+                - button [ref=e3346] [cursor=pointer]:
+                  - img [ref=e3349]
+              - generic [ref=e3353]:
+                - generic [ref=e3354]:
+                  - img [ref=e3358]
+                  - generic "build" [ref=e3361]
+                - generic [ref=e3363]: 27m 45s
+      - generic [ref=e3370]:
+        - tablist [ref=e3376]:
+          - generic [ref=e3377]:
+            - tab "概览" [ref=e3378] [cursor=pointer]:
+              - generic [ref=e3379]: 概览
+            - tab "编排流程" [ref=e3380] [cursor=pointer]:
+              - generic [ref=e3381]: 编排流程
+            - tab "事件信息" [ref=e3382] [cursor=pointer]:
+              - generic [ref=e3383]: 事件信息
+            - tab "执行参数" [ref=e3384] [cursor=pointer]:
+              - generic [ref=e3385]: 执行参数
+        - tabpanel [ref=e3387]:
+          - generic [ref=e3389]:
+            - generic [ref=e3391]:
+              - img [ref=e3393]
+              - generic [ref=e3398]:
+                - text: build-base-image, build-ascend-minimal-cpu, build-ascend-minimal-cann, build-ascend-datascience, build-ascend-codeserver-datascience, build-ascend-pytorch-cann, build-ascend-mindspore-cann 任务引用了即将废弃的 ClusterTask，请尽快将引用的官方 ClusterTask 任务更新为对应的平台任务，将引用的自定义 ClusterTask 更新为源管理中的任务，详细说明请参看帮助文档。
+                - link [ref=e3399] [cursor=pointer]:
+                  - /url: /console-devops-docs/zh/devops-faq/cicd/modify_cluster_task/
+                  - img [ref=e3401]
+            - generic [ref=e3403]:
+              - generic [ref=e3406]:
+                - generic [ref=e3407]: 基本信息
+                - generic [ref=e3409]:
+                  - generic [ref=e3410]:
+                    - generic [ref=e3411]: "触发方式 :"
+                    - generic [ref=e3416]: zgsu@alauda.io 手动触发
+                  - generic [ref=e3417]:
+                    - generic [ref=e3418]: "代码仓库:"
+                    - generic [ref=e3419]:
+                      - generic [ref=e3421]:
+                        - img "integrationClassName" [ref=e3422]
+                        - generic "https://gitlab-ce.alauda.cn/aml/odh-workbench-images" [ref=e3423]
+                      - link [ref=e3425] [cursor=pointer]:
+                        - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images
+                        - img [ref=e3427]
+                  - generic [ref=e3429]:
+                    - generic [ref=e3430]: "执行时间:"
+                    - generic [ref=e3433]: 2026-04-12 23:57:32
+                  - generic [ref=e3434]:
+                    - generic [ref=e3435]: "构建对象:"
+                    - generic [ref=e3438]:
+                      - generic "feat/ascend" [ref=e3439]
+                      - link [ref=e3440] [cursor=pointer]:
+                        - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/tree/feat%2Fascend
+                        - img [ref=e3442]
+                  - generic [ref=e3444]:
+                    - generic [ref=e3445]: "耗时:"
+                    - generic [ref=e3449]: 28m 40s
+                  - generic [ref=e3450]:
+                    - generic [ref=e3451]: "Commit ID:"
+                    - generic [ref=e3452]:
+                      - 'generic "55134a92 (chore: add ascend codeserver datascience build Add the ascend codeserver datascience image sources and wire the build-ascend pipeline task so this variant can be built from the repo. Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com> )" [ref=e3454]'
+                      - link [ref=e3456] [cursor=pointer]:
+                        - /url: https://gitlab-ce.alauda.cn/aml/odh-workbench-images/-/commit/55134a92b7104b9d8923b746d6bb596b33a7a84e
+                        - img [ref=e3458]
+              - generic [ref=e3462]:
+                - generic [ref=e3463]:
+                  - text: 制品地址
+                  - img [ref=e3465] [cursor=pointer]
+                - generic [ref=e3469]:
+                  - generic [ref=e3470]: 构建的制品
+                  - generic [ref=e3472]:
+                    - img "OCIContainerImage" [ref=e3473]
+                    - link "build-harbor.alauda.cn/mlops/workbench-images/alauda-workbench-jupyter-mindspore-cann-py312-ubi9:v0.0.0-feat.4.g55134a92-feat-asc" [ref=e3474] [cursor=pointer]:
+                      - /url: /console-devops/workspace/aml/artifact-management/repository/image/build-harbor/mlops/workbench-images%2Falauda-workbench-jupyter-mindspore-cann-py312-ubi9/v0.0.0-feat.4.g55134a92-feat-asc

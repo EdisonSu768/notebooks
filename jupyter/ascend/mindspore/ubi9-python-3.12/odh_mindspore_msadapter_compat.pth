@@ -1,0 +1,1 @@
+import odh_mindspore_msadapter_compat; odh_mindspore_msadapter_compat.bootstrap()

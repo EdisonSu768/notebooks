@@ -1,0 +1,1 @@
+/Users/szg/alauda/odh-workbench-images/tasks/npu-task.md
